@@ -1,0 +1,20 @@
+Q1: What is the advantage of using priority feedback queue in comparison with other scheduling
+algorithms you have learned?
+Ans:
+priority feedback queue (PFQ) có ý tưởng giống với các giải thuật là Round Robin (RR), Priority Scheduling, và Multilevel Queue
+nên PFQ thừa hưởng các lợi thế sau:
+    - Priority Scheduling: sử dụng độ ưu tiên khi lựa chọn process giúp các process quan trọng hơn được xử lý trước.
+    - Round Robin: sử dụng quantum time giúp các process đều được thực thi luân phiên và tránh tình trạng 'starvation' khi một process có độ ưu tiên thấp có thể sẽ không được thực thi.
+    - Multilevel Queue: sử dụng nhiều hàng đợi (cụ thể trong PFQ là ready queue và run queue) giúp lựa chọn hiệu quả hơn.
+Tuy nhiên, ta có thể thấy các giải thuật trên tồn tại một số nhược điểm:
+    - Priority Scheduling: một process có priority thấp có thể phải đợi vô thời hạn
+    - Round Robin: thời gian đợi trung bình lớn. Nếu như một process cần được thực thi trước (priority cao) phải đợi lâu thì hệ thống sẽ không đựoc vận hành tốt.
+    - Multilevel Queue: 
+Khi áp dụng nhiều ý tưởng trên cho giải thuật, PFQ sẽ khắc phục nhước điểm của các giải thụật gốc:
+    - Giả sử ta có một process q0 với priority rất cao và thời gian thực thi quá lớn. Một process mới q1 được thêm vào. Nếu chỉ có một queue, mặc dù q1 có priority cao nhưng không bằng q0, 
+    sau một hay nhiều quantum time thì q1 vẫn phải đợi rất lâu do thời gian thực thi của q0 quá lớn.
+    Ở đây, PFQ sử dụng ready_queue để giữ những process đợi được đưa vào thực thi và run_queue để giữ những process đã được thực thi sau một quantum_time.
+    Cơ chế này giúp q1 sau khi được thêm vào ready_queue, q0 thực thi sau quantum time sẽ được đưa vào run_queue. Lúc này, giải thuật lựa chọn process có priority cao nhất trong
+    ready_queue để thực thi, nếu q1 có priority cao nhất thì sẽ được lựa chọn. Điều này tương tự với q2,q3,q4.. với các priority khác nhau.
+    Như vậy, giải thuật giúp tất cả process được thực thi luân phiên
+    nhưng vẫn ưu tiên ưu tiên process có priority cao hơn và đảm bảo không process nào chờ đợi vô hạn.    
