@@ -18,9 +18,9 @@ implement hello_deadlines(): done(Khang, Rom), edit(Long, Khanh): Khang and Rom 
     - answer q1: done(Khang)
     - draw Gantt chart
 2. Memory Management
-    - implement get_page_table()
-    - implement translate()
-    - implement alloc_mem()
+    - implement get_page_table() : done (ROM)
+    - implement translate() : done (ROM)
+    - implement alloc_mem() : working(ROM)
     - implement free_mem() 
     - answer question
     - show status of RAM
