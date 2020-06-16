@@ -53,6 +53,9 @@ static struct page_table_t * get_page_table(
 	int i;
 	for (i = 0; i < seg_table->size; i++) {
 		// Enter your code here
+		if ((seg_table[i].table->v_index) == index) {
+			return seg_table[i].table[i].pages;
+		}
 	}
 	return NULL;
 
@@ -87,6 +90,8 @@ static int translate(
 			 * to [p_index] field of page_table->table[i] to 
 			 * produce the correct physical address and save it to
 			 * [*physical_addr]  */
+			*physical_addr = page_table->table[i].p_index << OFFSET_LEN;
+			*physical_addr = *physical_addr | offset;
 			return 1;
 		}
 	}
@@ -100,7 +105,8 @@ addr_t alloc_mem(uint32_t size, struct pcb_t * proc) {
 	 * process [proc] and save the address of the first
 	 * byte in the allocated memory region to [ret_mem].
 	 * */
-
+	void* data = malloc(size);
+	ret_mem = data;
 	uint32_t num_pages = (size % PAGE_SIZE) ? size / PAGE_SIZE :
 		size / PAGE_SIZE + 1; // Number of pages we will use
 	int mem_avail = 0; // We could allocate new memory region or not?
@@ -114,6 +120,19 @@ addr_t alloc_mem(uint32_t size, struct pcb_t * proc) {
 	 * For virtual memory space, check bp (break pointer).
 	 * */
 	
+	int num_freed_pages = 0;
+	for (int i = 0; i < NUM_PAGES; i++) {
+		if (_mem_stat[i].proc != 0) {
+			num_freed_pages++;
+		}
+	}
+
+	bool is_enough_pages = (num_freed_pages > num_pages);
+	// |-------------------------->(proc->bp)|(free)|
+	// |proc->bp / PAGE_LEN + 1 pages in used|______|
+	bool is_enough_ram = (proc->bp + num_pages * PAGE_LEN)  < (NUM_PAGES + 1) * PAGE_LEN;
+	if (is_enough_pages && is_enough_ram) mem_avail = 1;
+
 	if (mem_avail) {
 		/* We could allocate new memory region to the process */
 		ret_mem = proc->bp;
