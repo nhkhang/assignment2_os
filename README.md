@@ -20,10 +20,10 @@ implement hello_deadlines(): done(Khang, Rom), edit(Long, Khanh): Khang and Rom 
 2. Memory Management
     - implement get_page_table() : done (ROM)
     - implement translate() : done (ROM)
-    - implement alloc_mem() : working(ROM)
-    - implement free_mem() 
+    - implement alloc_mem() : working(ROM), working(Long)
+    - implement free_mem() : working(Long)
     - answer question
     - show status of RAM
-3. Synchronization
+3. Synchronization 
 
 
