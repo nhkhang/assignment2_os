@@ -157,6 +157,9 @@ int free_mem(addr_t address, struct pcb_t * proc) {
 	 * 	  the process [proc].
 	 * 	- Remember to use lock to protect the memory from other
 	 * 	  processes.  */
+	pthread_mutex_lock(&mem_lock);
+	
+	pthread_mutex_unlock(&mem_lock);
 	return 0;
 }
 
