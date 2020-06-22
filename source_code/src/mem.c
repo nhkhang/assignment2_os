@@ -158,10 +158,74 @@ int free_mem(addr_t address, struct pcb_t * proc) {
 	 * 	- Remember to use lock to protect the memory from other
 	 * 	  processes.  */
 	pthread_mutex_lock(&mem_lock);
-	
+
+	addr_t virtual_addr, 	// Given virtual address
+	addr_t physical_addr, // Physical address to be returned
+
+	if (!translate(virtual_addr, &physical_addr, proc)) 
+		return 1;
+
+	// Clear physical page in memory
+	int num_pages = 0;
+	int i;
+	for (i = physical_addr >> OFFSET_LEN; i != -1; i = _mem_stat[i].next) {
+		num_pages++;
+		_mem_stat[i].proc = 0; 
+	}
+
+	// Clear virtual page in process
+	for (i = 0; i < num_pages; i++) {
+		addr_t v_addr = virtual_addr + i * PAGE_SIZE;
+		addr_t v_segment = get_first_lv(v_addr);
+		addr_t v_page = get_second_lv(v_addr);
+		struct page_table_t * page_table = get_page_table(v_segment, proc->seg_table);
+
+		int j;
+		for (j = 0; j < page_table->size; j++) {
+			if (page_table->table[j].v_index == v_page) {
+				int last = --page_table->size;
+				page_table->table[j] = page_table->table[last];
+				break;
+			}
+		}
+		if (page_table->size == 0) {
+			remove_page_table(v_segment, proc->seg_table);
+		}
+	}
+
+	dump();
+
+	if (v_address + num_pages * PAGE_SIZE == proc->bp) {
+		free_mem_break_point(proc);
+	}
+
 	pthread_mutex_unlock(&mem_lock);
 	return 0;
 }
+
+void free_mem_break_point(struct pcb_t * proc) {
+	while (proc->bp >= PAGE_SIZE) {
+		addr_t last_addr = proc->bp - PAGE_SIZE;
+		addr_t last_segment = get_first_lv(last_addr);
+		addr_t last_page = get_second_lv(last_addr);
+		struct page_table_t * page_table = get_page_table(last_segment, proc->seg_table);
+		if (page_table == NULL) 
+			return;
+		while (last_page >= 0) {
+			int i;
+			for (i = 0; i < page_table->size; i++) {
+				if (page_table->table[i].v_index == last_page) {
+					proc->bp -= PAGE_SIZE;
+					last_page--;
+					break;
+				}
+			}
+			if (i == page_table->size) break;
+		}
+		if (last_page >= 0) break;
+	}
+}
+
 
 int read_mem(addr_t address, struct pcb_t * proc, BYTE * data) {
 	addr_t physical_addr;
