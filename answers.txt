@@ -18,3 +18,17 @@ Khi áp dụng nhiều ý tưởng trên cho giải thuật, PFQ sẽ khắc ph�
     ready_queue để thực thi, nếu q1 có priority cao nhất thì sẽ được lựa chọn. Điều này tương tự với q2,q3,q4.. với các priority khác nhau.
     Như vậy, giải thuật giúp tất cả process được thực thi luân phiên
     nhưng vẫn ưu tiên ưu tiên process có priority cao hơn và đảm bảo không process nào chờ đợi vô hạn.    
+
+
+Q2: What is the advantage and disadvantage of segmentation with paging?
+Ans: 
+Ưu điểm:
+    - Sử dụng bộ nhớ một cách tiết kiệm và hiệu quả.
+    - Tận dụng được các lợi thế của giải thuật phân trang:
+        + Đơn giản trong việc cấp phát bộ nhớ.
+        + Tránh được phân mảnh ngoại.
+    - Kích thước của bảng phân trang được giới hạn bởi kích thước của segment.
+Nhược điểm:
+    - Giải thuật vẫn còn phân mảnh nội.
+    - Độ phức tạp của giải thuật cao.
+    - Bảng phân trang cần phải được lưu trữ liên tục bên trong bộ nhớ.
