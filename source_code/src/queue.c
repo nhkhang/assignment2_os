@@ -22,7 +22,7 @@ struct pcb_t * dequeue(struct queue_t * q) {
 	if (q->size == 0) {
 		return NULL;
 	}
-	int maxIdx = 0;
+	int maxIdx = 0; // index of max priority task in queue
 	for (int i = 1; i < q->size; i++) {
 		if (q->proc[i]->priority > q->proc[maxIdx]->priority) {
 			maxIdx = i;
