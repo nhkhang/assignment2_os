@@ -148,62 +148,7 @@ addr_t alloc_mem(uint32_t size, struct pcb_t * proc) {
 	return ret_mem;
 }
 
-int free_mem(addr_t address, struct pcb_t * proc) {
-	/*TODO: Release memory region allocated by [proc]. The first byte of
-	 * this region is indicated by [address]. Task to do:
-	 * 	- Set flag [proc] of physical page use by the memory block
-	 * 	  back to zero to indicate that it is free.
-	 * 	- Remove unused entries in segment table and page tables of
-	 * 	  the process [proc].
-	 * 	- Remember to use lock to protect the memory from other
-	 * 	  processes.  */
-	pthread_mutex_lock(&mem_lock);
-
-	addr_t virtual_addr, 	// Given virtual address
-	addr_t physical_addr, // Physical address to be returned
-
-	if (!translate(virtual_addr, &physical_addr, proc)) 
-		return 1;
-
-	// Clear physical page in memory
-	int num_pages = 0;
-	int i;
-	for (i = physical_addr >> OFFSET_LEN; i != -1; i = _mem_stat[i].next) {
-		num_pages++;
-		_mem_stat[i].proc = 0; 
-	}
-
-	// Clear virtual page in process
-	for (i = 0; i < num_pages; i++) {
-		addr_t v_addr = virtual_addr + i * PAGE_SIZE;
-		addr_t v_segment = get_first_lv(v_addr);
-		addr_t v_page = get_second_lv(v_addr);
-		struct page_table_t * page_table = get_page_table(v_segment, proc->seg_table);
-
-		int j;
-		for (j = 0; j < page_table->size; j++) {
-			if (page_table->table[j].v_index == v_page) {
-				int last = --page_table->size;
-				page_table->table[j] = page_table->table[last];
-				break;
-			}
-		}
-		if (page_table->size == 0) {
-			remove_page_table(v_segment, proc->seg_table);
-		}
-	}
-
-	dump();
-
-	if (v_address + num_pages * PAGE_SIZE == proc->bp) {
-		free_mem_break_point(proc);
-	}
-
-	pthread_mutex_unlock(&mem_lock);
-	return 0;
-}
-
-void free_mem_break_point(struct pcb_t * proc) {
+void free_break_point(struct pcb_t * proc) {
 	while (proc->bp >= PAGE_SIZE) {
 		addr_t last_addr = proc->bp - PAGE_SIZE;
 		addr_t last_segment = get_first_lv(last_addr);
@@ -226,6 +171,65 @@ void free_mem_break_point(struct pcb_t * proc) {
 	}
 }
 
+
+int free_mem(addr_t address, struct pcb_t * proc) {
+	/*TODO: Release memory region allocated by [proc]. The first byte of
+	 * this region is indicated by [address]. Task to do:
+	 * 	- Set flag [proc] of physical page use by the memory block
+	 * 	  back to zero to indicate that it is free.
+	 * 	- Remove unused entries in segment table and page tables of
+	 * 	  the process [proc].
+	 * 	- Remember to use lock to protect the memory from other
+	 * 	  processes.  */
+	pthread_mutex_lock(&mem_lock);
+
+	addr_t virtual_addr = address; 	// Given virtual address
+	addr_t physical_addr = 0; // Physical address to be returned
+
+	if (!translate(virtual_addr, &physical_addr, proc)) 
+		return 1;
+
+	// Clear physical page in memory
+	addr_t physical_segment_page_index = physical_addr >> OFFSET_LEN; 
+	int num_pages = 0;
+	int i;
+	for (i = physical_segment_page_index >> OFFSET_LEN; i != -1; i = _mem_stat[i].next) {
+		num_pages++;
+		_mem_stat[i].proc = 0; 
+	}
+
+	// Clear virtual page in process
+	for (i = 0; i < num_pages; i++) {
+		addr_t v_addr = virtual_addr + i * PAGE_SIZE;
+		addr_t v_segment = get_first_lv(v_addr);
+		addr_t v_page = get_second_lv(v_addr);
+		struct page_table_t * page_table = get_page_table(v_segment, proc->seg_table);
+		if (page_table == NULL) {
+			continue;
+		}
+		int j;
+		for (j = 0; j < page_table->size; j++) {
+			if (page_table->table[j].v_index == v_page) {
+				int last = --page_table->size;
+				page_table->table[j] = page_table->table[last];
+				break;
+			}
+		}
+		if (page_table->size == 0) {
+			remove_page_table(v_segment, proc->seg_table);
+		}
+	}
+
+
+	if (virtual_addr + num_pages * PAGE_SIZE == proc->bp) {
+		free_break_point(proc);
+	}
+
+	dump();
+
+	pthread_mutex_unlock(&mem_lock);
+	return 0;
+}
 
 int read_mem(addr_t address, struct pcb_t * proc, BYTE * data) {
 	addr_t physical_addr;
