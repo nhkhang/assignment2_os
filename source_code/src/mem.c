@@ -49,7 +49,10 @@ static struct page_table_t * get_page_table(
 	 * field of the row is equal to the index
 	 *
 	 * */
-
+	if (seg_table == NULL) 
+	{
+		return NULL;
+	}
 	int i;
 	for (i = 0; i < seg_table->size; i++) {
 		// Enter your code here
@@ -105,8 +108,7 @@ addr_t alloc_mem(uint32_t size, struct pcb_t * proc) {
 	 * process [proc] and save the address of the first
 	 * byte in the allocated memory region to [ret_mem].
 	 * */
-	uint32_t num_pages = (size % PAGE_SIZE) ? size / PAGE_SIZE :
-		size / PAGE_SIZE + 1; // Number of pages we will use
+	uint32_t num_pages = (size % PAGE_SIZE) ? size / PAGE_SIZE : size / PAGE_SIZE + 1; // Number of pages we will use
 	int mem_avail = 0; // We could allocate new memory region or not?
 
 	/* First we must check if the amount of free memory in
@@ -142,7 +144,7 @@ addr_t alloc_mem(uint32_t size, struct pcb_t * proc) {
 		 * 	  to ensure accesses to allocated memory slot is
 		 * 	  valid. */
 		uint32_t num_of_alloc = 0;
-		for (int i = 0, curIdx = 0, prevIdx = 0; i < NUM_PAGES; i++) 
+		for (int i = 0, curIdx = 0, prevIdx = -1; i < NUM_PAGES; i++) 
 		{
 			// check for all page if it is free
 			// curIdx and prevIdx track the pages of this proc
@@ -150,9 +152,9 @@ addr_t alloc_mem(uint32_t size, struct pcb_t * proc) {
 			{
 				_mem_stat[i].proc = proc->pid;
 				_mem_stat[i].index = curIdx;
-				if (curIdx != 0) 
+				if (prevIdx > -1) 
 				{
-					_mem_stat[i].next = i;
+					_mem_stat[prevIdx].next = i;
 				}
 
 				addr_t physical_addr = i << OFFSET_LEN;
@@ -172,10 +174,12 @@ addr_t alloc_mem(uint32_t size, struct pcb_t * proc) {
 					}
 				}
 
-				if (!found) {
+				if (!found) 
+				{
 					int lastIdx = proc->seg_table->size;
 					proc->seg_table->size++;
 					proc->seg_table->table[lastIdx].pages = (struct page_table_t *) malloc(sizeof(struct page_table_t));
+					proc->seg_table->table[lastIdx].pages->size++;
 					proc->seg_table->table[lastIdx].v_index = first_lv;
 					proc->seg_table->table[lastIdx].pages->table[0].v_index = second_lv;
 					proc->seg_table->table[lastIdx].pages->table[0].p_index = physical_addr >> OFFSET_LEN;
@@ -183,15 +187,14 @@ addr_t alloc_mem(uint32_t size, struct pcb_t * proc) {
 				prevIdx = i;
 				curIdx++;
 				num_of_alloc++;
-				if (num_of_alloc == num_pages) {
+				if (num_of_alloc == num_pages) 
+				{
 					_mem_stat[prevIdx].next = -1;
 					break;
 				}
 			}
 		}
 	}
-	printf("=============" );
-   	dump();
 	pthread_mutex_unlock(&mem_lock);
 	return ret_mem;
 }
