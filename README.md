@@ -22,7 +22,7 @@ implement hello_deadlines(): done(Khang, Rom), edit(Long, Khanh): Khang and Rom 
     - implement translate() : done (ROM)
     - implement alloc_mem() : working(ROM)
     - implement free_mem() : done(Long)
-    - answer question
+    - answer question: done(Khanh)
     - show status of RAM
 3. Synchronization 
 
