@@ -147,6 +147,22 @@ addr_t alloc_mem(uint32_t size, struct pcb_t * proc) {
 	pthread_mutex_unlock(&mem_lock);
 	return ret_mem;
 }
+static int remove_page_table(addr_t v_segment, struct seg_table_t * seg_table) {
+	if (seg_table == NULL)
+		return 0;
+	int i;
+	for (i = 0; i < seg_table->size; i++) {
+		if (seg_table->table[i].v_index == v_segment) {
+			int idx = seg_table->size-1;
+			seg_table->table[i] = seg_table->table[idx];
+			seg_table->table[idx].v_index = 0;
+			free(seg_table->table[idx].pages);
+			seg_table->size--;
+			return 1;
+		}
+	}
+	return 0;
+}
 
 void free_break_point(struct pcb_t * proc) {
 	while (proc->bp >= PAGE_SIZE) {
@@ -183,22 +199,20 @@ int free_mem(addr_t address, struct pcb_t * proc) {
 	 * 	  processes.  */
 	pthread_mutex_lock(&mem_lock);
 
-	addr_t virtual_addr = address; 	// Given virtual address
-	addr_t physical_addr = 0; // Physical address to be returned
+	addr_t virtual_addr = address; 
+	addr_t physical_addr = 0;
 
 	if (!translate(virtual_addr, &physical_addr, proc)) 
 		return 1;
 
-	// Clear physical page in memory
 	addr_t physical_segment_page_index = physical_addr >> OFFSET_LEN; 
 	int num_pages = 0;
 	int i;
-	for (i = physical_segment_page_index >> OFFSET_LEN; i != -1; i = _mem_stat[i].next) {
+	for (i = physical_segment_page_index; i != -1; i = _mem_stat[i].next) {
 		num_pages++;
 		_mem_stat[i].proc = 0; 
 	}
-
-	// Clear virtual page in process
+ 
 	for (i = 0; i < num_pages; i++) {
 		addr_t v_addr = virtual_addr + i * PAGE_SIZE;
 		addr_t v_segment = get_first_lv(v_addr);
