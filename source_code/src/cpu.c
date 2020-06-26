@@ -41,6 +41,7 @@ static int write(
 		uint32_t destination, // Index of destination register
 		uint32_t offset) { 	// Destination address =
 					// [destination] + [offset]
+	printf("%d\n", proc->regs[destination]);
 	return write_mem(proc->regs[destination] + offset, proc, data);
 } 
 

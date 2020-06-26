@@ -1,0 +1,1917 @@
+------ MEMORY MANAGEMENT TEST 0 ------------------------------------
+./mem input/proc/m0
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 01 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 01 (idx 001, nxt: 002)
+002: 00800-00bff - PID: 01 (idx 002, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 003, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 004, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 005, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 006, nxt: 007)
+007: 01c00-01fff - PID: 01 (idx 007, nxt: 008)
+008: 02000-023ff - PID: 01 (idx 008, nxt: 009)
+009: 02400-027ff - PID: 01 (idx 009, nxt: 010)
+010: 02800-02bff - PID: 01 (idx 010, nxt: 011)
+011: 02c00-02fff - PID: 01 (idx 011, nxt: 012)
+012: 03000-033ff - PID: 01 (idx 012, nxt: 013)
+013: 03400-037ff - PID: 01 (idx 013, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 01 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 01 (idx 001, nxt: 002)
+002: 00800-00bff - PID: 01 (idx 002, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 003, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 004, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 005, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 006, nxt: 007)
+007: 01c00-01fff - PID: 01 (idx 007, nxt: 008)
+008: 02000-023ff - PID: 01 (idx 008, nxt: 009)
+009: 02400-027ff - PID: 01 (idx 009, nxt: 010)
+010: 02800-02bff - PID: 01 (idx 010, nxt: 011)
+011: 02c00-02fff - PID: 01 (idx 011, nxt: 012)
+012: 03000-033ff - PID: 01 (idx 012, nxt: 013)
+013: 03400-037ff - PID: 01 (idx 013, nxt: -01)
+014: 03800-03bff - PID: 01 (idx 000, nxt: 015)
+015: 03c00-03fff - PID: 01 (idx 001, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+DEALLOCATE
+--------------------------------------------
+014: 03800-03bff - PID: 01 (idx 000, nxt: 015)
+015: 03c00-03fff - PID: 01 (idx 001, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 01 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 01 (idx 001, nxt: -01)
+014: 03800-03bff - PID: 01 (idx 000, nxt: 015)
+015: 03c00-03fff - PID: 01 (idx 001, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 01 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 01 (idx 001, nxt: -01)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+014: 03800-03bff - PID: 01 (idx 000, nxt: 015)
+015: 03c00-03fff - PID: 01 (idx 001, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+15360
+17408
+000: 00000-003ff - PID: 01 (idx 000, nxt: 001)
+	003e8: 15
+001: 00400-007ff - PID: 01 (idx 001, nxt: -01)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+014: 03800-03bff - PID: 01 (idx 000, nxt: 015)
+	03814: 66
+015: 03c00-03fff - PID: 01 (idx 001, nxt: -01)
+NOTE: Read file output/m0 to verify your result
+------ MEMORY MANAGEMENT TEST 1 ------------------------------------
+./mem input/proc/m1
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 01 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 01 (idx 001, nxt: 002)
+002: 00800-00bff - PID: 01 (idx 002, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 003, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 004, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 005, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 006, nxt: 007)
+007: 01c00-01fff - PID: 01 (idx 007, nxt: 008)
+008: 02000-023ff - PID: 01 (idx 008, nxt: 009)
+009: 02400-027ff - PID: 01 (idx 009, nxt: 010)
+010: 02800-02bff - PID: 01 (idx 010, nxt: 011)
+011: 02c00-02fff - PID: 01 (idx 011, nxt: 012)
+012: 03000-033ff - PID: 01 (idx 012, nxt: 013)
+013: 03400-037ff - PID: 01 (idx 013, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 01 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 01 (idx 001, nxt: 002)
+002: 00800-00bff - PID: 01 (idx 002, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 003, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 004, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 005, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 006, nxt: 007)
+007: 01c00-01fff - PID: 01 (idx 007, nxt: 008)
+008: 02000-023ff - PID: 01 (idx 008, nxt: 009)
+009: 02400-027ff - PID: 01 (idx 009, nxt: 010)
+010: 02800-02bff - PID: 01 (idx 010, nxt: 011)
+011: 02c00-02fff - PID: 01 (idx 011, nxt: 012)
+012: 03000-033ff - PID: 01 (idx 012, nxt: 013)
+013: 03400-037ff - PID: 01 (idx 013, nxt: -01)
+014: 03800-03bff - PID: 01 (idx 000, nxt: 015)
+015: 03c00-03fff - PID: 01 (idx 001, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+DEALLOCATE
+--------------------------------------------
+014: 03800-03bff - PID: 01 (idx 000, nxt: 015)
+015: 03c00-03fff - PID: 01 (idx 001, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 01 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 01 (idx 001, nxt: -01)
+014: 03800-03bff - PID: 01 (idx 000, nxt: 015)
+015: 03c00-03fff - PID: 01 (idx 001, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 01 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 01 (idx 001, nxt: -01)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+014: 03800-03bff - PID: 01 (idx 000, nxt: 015)
+015: 03c00-03fff - PID: 01 (idx 001, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+DEALLOCATE
+--------------------------------------------
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+014: 03800-03bff - PID: 01 (idx 000, nxt: 015)
+015: 03c00-03fff - PID: 01 (idx 001, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+DEALLOCATE
+--------------------------------------------
+014: 03800-03bff - PID: 01 (idx 000, nxt: 015)
+015: 03c00-03fff - PID: 01 (idx 001, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+DEALLOCATE
+--------------------------------------------
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+NOTE: Read file output/m1 to verify your result (your implementation should print nothing)
+------ SCHEDULING TEST 0 -------------------------------------------
+./os sched_0
+Time slot   0
+	Loaded a process at input/proc/s0, PID: 1
+Time slot   1
+	CPU 0: Dispatched process  1
+Time slot   2
+Time slot   3
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  1
+Time slot   4
+	Loaded a process at input/proc/s1, PID: 2
+Time slot   5
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  2
+Time slot   6
+Time slot   7
+	CPU 0: Put process  2 to run queue
+	CPU 0: Dispatched process  2
+Time slot   8
+Time slot   9
+	CPU 0: Put process  2 to run queue
+	CPU 0: Dispatched process  1
+Time slot  10
+Time slot  11
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  2
+Time slot  12
+Time slot  13
+	CPU 0: Put process  2 to run queue
+	CPU 0: Dispatched process  1
+Time slot  14
+Time slot  15
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  2
+Time slot  16
+	CPU 0: Processed  2 has finished
+	CPU 0: Dispatched process  1
+Time slot  17
+Time slot  18
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  1
+Time slot  19
+Time slot  20
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  1
+Time slot  21
+Time slot  22
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  1
+Time slot  23
+	CPU 0: Processed  1 has finished
+	CPU 0 stopped
+
+MEMORY CONTENT: 
+NOTE: Read file output/sched_0 to verify your result
+------ SCHEDULING TEST 1 -------------------------------------------
+./os sched_1
+Time slot   0
+	Loaded a process at input/proc/s0, PID: 1
+Time slot   1
+	CPU 0: Dispatched process  1
+Time slot   2
+Time slot   3
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  1
+Time slot   4
+	Loaded a process at input/proc/s1, PID: 2
+Time slot   5
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  2
+Time slot   6
+	Loaded a process at input/proc/s2, PID: 3
+Time slot   7
+	CPU 0: Put process  2 to run queue
+	CPU 0: Dispatched process  3
+	Loaded a process at input/proc/s3, PID: 4
+Time slot   8
+Time slot   9
+	CPU 0: Put process  3 to run queue
+	CPU 0: Dispatched process  4
+Time slot  10
+Time slot  11
+	CPU 0: Put process  4 to run queue
+	CPU 0: Dispatched process  2
+Time slot  12
+Time slot  13
+	CPU 0: Put process  2 to run queue
+	CPU 0: Dispatched process  3
+Time slot  14
+Time slot  15
+	CPU 0: Put process  3 to run queue
+	CPU 0: Dispatched process  1
+Time slot  16
+Time slot  17
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  4
+Time slot  18
+Time slot  19
+	CPU 0: Put process  4 to run queue
+	CPU 0: Dispatched process  2
+Time slot  20
+Time slot  21
+	CPU 0: Put process  2 to run queue
+	CPU 0: Dispatched process  3
+Time slot  22
+Time slot  23
+	CPU 0: Put process  3 to run queue
+	CPU 0: Dispatched process  1
+Time slot  24
+Time slot  25
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  4
+Time slot  26
+Time slot  27
+	CPU 0: Put process  4 to run queue
+	CPU 0: Dispatched process  2
+Time slot  28
+	CPU 0: Processed  2 has finished
+	CPU 0: Dispatched process  3
+Time slot  29
+Time slot  30
+	CPU 0: Put process  3 to run queue
+	CPU 0: Dispatched process  1
+Time slot  31
+Time slot  32
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  4
+Time slot  33
+Time slot  34
+	CPU 0: Put process  4 to run queue
+	CPU 0: Dispatched process  3
+Time slot  35
+Time slot  36
+	CPU 0: Put process  3 to run queue
+	CPU 0: Dispatched process  1
+Time slot  37
+Time slot  38
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  4
+Time slot  39
+Time slot  40
+	CPU 0: Put process  4 to run queue
+	CPU 0: Dispatched process  3
+Time slot  41
+Time slot  42
+	CPU 0: Processed  3 has finished
+	CPU 0: Dispatched process  1
+Time slot  43
+Time slot  44
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  4
+Time slot  45
+	CPU 0: Processed  4 has finished
+	CPU 0: Dispatched process  1
+Time slot  46
+	CPU 0: Processed  1 has finished
+	CPU 0 stopped
+
+MEMORY CONTENT: 
+NOTE: Read file output/sched_1 to verify your result
+----- OS TEST 0 ----------------------------------------------------
+./os os_0
+Time slot   0
+	Loaded a process at input/proc/p0, PID: 1
+	CPU 1: Dispatched process  1
+Time slot   1
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 01 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 01 (idx 001, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	Loaded a process at input/proc/p1, PID: 2
+Time slot   2
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 01 (idx 000, nxt: 001)
+	CPU 0: Dispatched process  2
+001: 00400-007ff - PID: 01 (idx 001, nxt: -01)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+Time slot   3
+--------------------------------------------
+DEALLOCATE
+--------------------------------------------
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+	Loaded a process at input/proc/p1, PID: 3
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 02 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 02 (idx 001, nxt: 007)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 02 (idx 002, nxt: 008)
+008: 02000-023ff - PID: 02 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 02 (idx 004, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+Time slot   4
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 02 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 02 (idx 001, nxt: 007)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 	Loaded a process at input/proc/p1, PID: 4
+00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 02 (idx 002, nxt: 008)
+008: 02000-023ff - PID: 02 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 02 (idx 004, nxt: -01)
+010: 02800-02bff - PID: 01 (idx 000, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 02 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 02 (idx 001, nxt: 007)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 02 (idx 002, nxt: 008)
+008: 02000-023ff - PID: 02 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 02 (idx 004, nxt: -01)
+010: 02800-02bff - PID: 01 (idx 000, nxt: -01)
+011: 02c00-02fff - PID: 02 (idx 000, nxt: 012)
+012: 03000-033ff - PID: 02 (idx 001, nxt: 013)
+013: 03400-037ff - PID: 02 (idx 002, nxt: 014)
+014: 03800-03bff - PID: 02 (idx 003, nxt: 015)
+015: 03c00-03fff - PID: 02 (idx 004, nxt: 016)
+016: 04000-043ff - PID: 02 (idx 005, nxt: 017)
+017: 04400-047ff - PID: 02 (idx 006, nxt: 018)
+018: 04800-04bff - PID: 02 (idx 007, nxt: 019)
+019: 04c00-04fff - PID: 02 (idx 008, nxt: 020)
+020: 05000-053ff - PID: 02 (idx 009, nxt: 021)
+021: 05400-057ff - PID: 02 (idx 010, nxt: 022)
+022: 05800-05bff - PID: 02 (idx 011, nxt: 023)
+023: 05c00-05fff - PID: 02 (idx 012, nxt: 024)
+024: 06000-063ff - PID: 02 (idx 013, nxt: 025)
+025: 06400-067ff - PID: 02 (idx 014, nxt: 026)
+026: 06800-06bff - PID: 02 (idx 015, nxt: 027)
+027: 06c00-06fff - PID: 02 (idx 016, nxt: 028)
+028: 07000-073ff - PID: 02 (idx 017, nxt: 029)
+029: 07400-077ff - PID: 02 (idx 018, nxt: 030)
+030: 07800-07bff - PID: 02 (idx 019, nxt: 031)
+031: 07c00-07fff - PID: 02 (idx 020, nxt: 032)
+032: 08000-083ff - PID: 02 (idx 021, nxt: 033)
+033: 08400-087ff - PID: 02 (idx 022, nxt: 034)
+034: 08800-08bff - PID: 02 (idx 023, nxt: 035)
+035: 08c00-08fff - PID: 02 (idx 024, nxt: 036)
+036: 09000-093ff - PID: 02 (idx 025, nxt: 037)
+037: 09400-097ff - PID: 02 (idx 026, nxt: 038)
+038: 09800-09bff - PID: 02 (idx 027, nxt: 039)
+039: 09c00-09fff - PID: 02 (idx 028, nxt: 040)
+040: 0a000-0a3ff - PID: 02 (idx 029, nxt: 041)
+041: 0a400-0a7ff - PID: 02 (idx 030, nxt: 042)
+042: 0a800-0abff - PID: 02 (idx 031, nxt: 043)
+043: 0ac00-0afff - PID: 02 (idx 032, nxt: 044)
+044: 0b000-0b3ff - PID: 02 (idx 033, nxt: 045)
+045: 0b400-0b7ff - PID: 02 (idx 034, nxt: 046)
+046: 0b800-0bbff - PID: 02 (idx 035, nxt: 047)
+047: 0bc00-0bfff - PID: 02 (idx 036, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+Time slot   5
+8192
+--------------------------------------------
+DEALLOCATE
+--------------------------------------------
+000: 00000-003ff - PID: 02 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 02 (idx 001, nxt: 007)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 02 (idx 002, nxt: 008)
+008: 02000-023ff - PID: 02 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 02 (idx 004, nxt: -01)
+010: 02800-02bff - PID: 01 (idx 000, nxt: -01)
+	02814: 64
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+Time slot   6
+	CPU 1: Put process  1 to run queue
+	CPU 1: Dispatched process  3
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 02 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 02 (idx 001, nxt: 007)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 02 (idx 002, nxt: 008)
+008: 02000-023ff - PID: 02 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 02 (idx 004, nxt: -01)
+010: 02800-02bff - PID: 01 (idx 000, nxt: -01)
+	02814: 64
+011: 02c00-02fff - PID: 02 (idx 000, nxt: 012)
+012: 03000-033ff - PID: 02 (idx 001, nxt: 013)
+013: 03400-037ff - PID: 02 (idx 002, nxt: 014)
+014: 03800-03bff - PID: 02 (idx 003, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+Time slot   7
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 02 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 02 (idx 001, nxt: 007)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 02 (idx 002, nxt: 008)
+008: 02000-023ff - PID: 02 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 02 (idx 004, nxt: -01)
+010: 02800-02bff - PID: 01 (idx 000, nxt: -01)
+	02814: 64
+011: 02c00-02fff - PID: 02 (idx 000, nxt: 012)
+012: 03000-033ff - PID: 02 (idx 001, nxt: 013)
+013: 03400-037ff - PID: 02 (idx 002, nxt: 014)
+014: 03800-03bff - PID: 02 (idx 003, nxt: -01)
+015: 03c00-03fff - PID: 03 (idx 000, nxt: 016)
+016: 04000-043ff - PID: 03 (idx 001, nxt: 017)
+017: 04400-047ff - PID: 03 (idx 002, nxt: 018)
+018: 04800-04bff - PID: 03 (idx 003, nxt: 019)
+019: 04c00-04fff - PID: 03 (idx 004, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+Time slot   8
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 02 (idx 000, nxt: 001)
+	CPU 0: Put process  2 to run queue
+001: 00400-007ff - PID: 02 (idx 001, nxt: 007)
+	CPU 0: Dispatched process  4
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 02 (idx 002, nxt: 008)
+008: 02000-023ff - PID: 02 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 02 (idx 004, nxt: -01)
+010: 02800-02bff - PID: 01 (idx 000, nxt: -01)
+	02814: 64
+011: 02c00-02fff - PID: 02 (idx 000, nxt: 012)
+012: 03000-033ff - PID: 02 (idx 001, nxt: 013)
+013: 03400-037ff - PID: 02 (idx 002, nxt: 014)
+014: 03800-03bff - PID: 02 (idx 003, nxt: -01)
+015: 03c00-03fff - PID: 03 (idx 000, nxt: 016)
+016: 04000-043ff - PID: 03 (idx 001, nxt: 017)
+017: 04400-047ff - PID: 03 (idx 002, nxt: 018)
+018: 04800-04bff - PID: 03 (idx 003, nxt: 019)
+019: 04c00-04fff - PID: 03 (idx 004, nxt: -01)
+020: 05000-053ff - PID: 03 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 03 (idx 001, nxt: 022)
+022: 05800-05bff - PID: 03 (idx 002, nxt: 023)
+023: 05c00-05fff - PID: 03 (idx 003, nxt: 024)
+024: 06000-063ff - PID: 03 (idx 004, nxt: 025)
+025: 06400-067ff - PID: 03 (idx 005, nxt: 026)
+026: 06800-06bff - PID: 03 (idx 006, nxt: 027)
+027: 06c00-06fff - PID: 03 (idx 007, nxt: 028)
+028: 07000-073ff - PID: 03 (idx 008, nxt: 029)
+029: 07400-077ff - PID: 03 (idx 009, nxt: 030)
+030: 07800-07bff - PID: 03 (idx 010, nxt: 031)
+031: 07c00-07fff - PID: 03 (idx 011, nxt: 032)
+032: 08000-083ff - PID: 03 (idx 012, nxt: 033)
+033: 08400-087ff - PID: 03 (idx 013, nxt: 034)
+034: 08800-08bff - PID: 03 (idx 014, nxt: 035)
+035: 08c00-08fff - PID: 03 (idx 015, nxt: 036)
+036: 09000-093ff - PID: 03 (idx 016, nxt: 037)
+037: 09400-097ff - PID: 03 (idx 017, nxt: 038)
+038: 09800-09bff - PID: 03 (idx 018, nxt: 039)
+039: 09c00-09fff - PID: 03 (idx 019, nxt: 040)
+040: 0a000-0a3ff - PID: 03 (idx 020, nxt: 041)
+041: 0a400-0a7ff - PID: 03 (idx 021, nxt: 042)
+042: 0a800-0abff - PID: 03 (idx 022, nxt: 043)
+043: 0ac00-0afff - PID: 03 (idx 023, nxt: 044)
+044: 0b000-0b3ff - PID: 03 (idx 024, nxt: 045)
+045: 0b400-0b7ff - PID: 03 (idx 025, nxt: 046)
+046: 0b800-0bbff - PID: 03 (idx 026, nxt: 047)
+047: 0bc00-0bfff - PID: 03 (idx 027, nxt: 048)
+048: 0c000-0c3ff - PID: 03 (idx 028, nxt: 049)
+049: 0c400-0c7ff - PID: 03 (idx 029, nxt: 050)
+050: 0c800-0cbff - PID: 03 (idx 030, nxt: 051)
+051: 0cc00-0cfff - PID: 03 (idx 031, nxt: 052)
+052: 0d000-0d3ff - PID: 03 (idx 032, nxt: 053)
+053: 0d400-0d7ff - PID: 03 (idx 033, nxt: 054)
+054: 0d800-0dbff - PID: 03 (idx 034, nxt: 055)
+055: 0dc00-0dfff - PID: 03 (idx 035, nxt: 056)
+056: 0e000-0e3ff - PID: 03 (idx 036, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+Time slot   9
+--------------------------------------------
+DEALLOCATE
+--------------------------------------------
+000: 00000-003ff - PID: 02 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 02 (idx 001, nxt: 007)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 02 (idx 002, nxt: 008)
+008: 02000-023ff - PID: 02 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 02 (idx 004, nxt: -01)
+010: 02800-02bff - PID: 01 (idx 000, nxt: -01)
+	02814: 64
+011: 02c00-02fff - PID: 02 (idx 000, nxt: 012)
+012: 03000-033ff - PID: 02 (idx 001, nxt: 013)
+013: 03400-037ff - PID: 02 (idx 002, nxt: 014)
+014: 03800-03bff - PID: 02 (idx 003, nxt: -01)
+015: 03c00-03fff - PID: 03 (idx 000, nxt: 016)
+016: 04000-043ff - PID: 03 (idx 001, nxt: 017)
+017: 04400-047ff - PID: 03 (idx 002, nxt: 018)
+018: 04800-04bff - PID: 03 (idx 003, nxt: 019)
+019: 04c00-04fff - PID: 03 (idx 004, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 02 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 02 (idx 001, nxt: 007)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 02 (idx 002, nxt: 008)
+008: 02000-023ff - PID: 02 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 02 (idx 004, nxt: -01)
+010: 02800-02bff - PID: 01 (idx 000, nxt: -01)
+	02814: 64
+011: 02c00-02fff - PID: 02 (idx 000, nxt: 012)
+012: 03000-033ff - PID: 02 (idx 001, nxt: 013)
+013: 03400-037ff - PID: 02 (idx 002, nxt: 014)
+014: 03800-03bff - PID: 02 (idx 003, nxt: -01)
+015: 03c00-03fff - PID: 03 (idx 000, nxt: 016)
+016: 04000-043ff - PID: 03 (idx 001, nxt: 017)
+017: 04400-047ff - PID: 03 (idx 002, nxt: 018)
+018: 04800-04bff - PID: 03 (idx 003, nxt: 019)
+019: 04c00-04fff - PID: 03 (idx 004, nxt: -01)
+020: 05000-053ff - PID: 04 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 04 (idx 001, nxt: 022)
+022: 05800-05bff - PID: 04 (idx 002, nxt: 023)
+023: 05c00-05fff - PID: 04 (idx 003, nxt: 024)
+024: 06000-063ff - PID: 04 (idx 004, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+Time slot  10
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 02 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 02 (idx 001, nxt: 007)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 02 (idx 002, nxt: 008)
+008: 02000-023ff - PID: 02 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 02 (idx 004, nxt: -01)
+010: 02800-02bff - PID: 01 (idx 000, nxt: -01)
+	02814: 64
+011: 02c00-02fff - PID: 02 (idx 000, nxt: 012)
+012: 03000-033ff - PID: 02 (idx 001, nxt: 013)
+013: 03400-037ff - PID: 02 (idx 002, nxt: 014)
+014: 03800-03bff - PID: 02 (idx 003, nxt: -01)
+015: 03c00-03fff - PID: 03 (idx 000, nxt: 016)
+016: 04000-043ff - PID: 03 (idx 001, nxt: 017)
+017: 04400-047ff - PID: 03 (idx 002, nxt: 018)
+018: 04800-04bff - PID: 03 (idx 003, nxt: 019)
+019: 04c00-04fff - PID: 03 (idx 004, nxt: -01)
+020: 05000-053ff - PID: 04 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 04 (idx 001, nxt: 022)
+022: 05800-05bff - PID: 04 (idx 002, nxt: 023)
+023: 05c00-05fff - PID: 04 (idx 003, nxt: 024)
+024: 06000-063ff - PID: 04 (idx 004, nxt: -01)
+025: 06400-067ff - PID: 03 (idx 000, nxt: 026)
+026: 06800-06bff - PID: 03 (idx 001, nxt: 027)
+027: 06c00-06fff - PID: 03 (idx 002, nxt: 028)
+028: 07000-073ff - PID: 03 (idx 003, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 02 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 02 (idx 001, nxt: 007)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 02 (idx 002, nxt: 008)
+008: 02000-023ff - PID: 02 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 02 (idx 004, nxt: -01)
+010: 02800-02bff - PID: 01 (idx 000, nxt: -01)
+	02814: 64
+011: 02c00-02fff - PID: 02 (idx 000, nxt: 012)
+012: 03000-033ff - PID: 02 (idx 001, nxt: 013)
+013: 03400-037ff - PID: 02 (idx 002, nxt: 014)
+014: 03800-03bff - PID: 02 (idx 003, nxt: -01)
+015: 03c00-03fff - PID: 03 (idx 000, nxt: 016)
+016: 04000-043ff - PID: 03 (idx 001, nxt: 017)
+017: 04400-047ff - PID: 03 (idx 002, nxt: 018)
+018: 04800-04bff - PID: 03 (idx 003, nxt: 019)
+019: 04c00-04fff - PID: 03 (idx 004, nxt: -01)
+020: 05000-053ff - PID: 04 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 04 (idx 001, nxt: 022)
+022: 05800-05bff - PID: 04 (idx 002, nxt: 023)
+023: 05c00-05fff - PID: 04 (idx 003, nxt: 024)
+024: 06000-063ff - PID: 04 (idx 004, nxt: -01)
+025: 06400-067ff - PID: 03 (idx 000, nxt: 026)
+026: 06800-06bff - PID: 03 (idx 001, nxt: 027)
+027: 06c00-06fff - PID: 03 (idx 002, nxt: 028)
+028: 07000-073ff - PID: 03 (idx 003, nxt: -01)
+029: 07400-077ff - PID: 04 (idx 000, nxt: 030)
+030: 07800-07bff - PID: 04 (idx 001, nxt: 031)
+031: 07c00-07fff - PID: 04 (idx 002, nxt: 032)
+032: 08000-083ff - PID: 04 (idx 003, nxt: 033)
+033: 08400-087ff - PID: 04 (idx 004, nxt: 034)
+034: 08800-08bff - PID: 04 (idx 005, nxt: 035)
+035: 08c00-08fff - PID: 04 (idx 006, nxt: 036)
+036: 09000-093ff - PID: 04 (idx 007, nxt: 037)
+037: 09400-097ff - PID: 04 (idx 008, nxt: 038)
+038: 09800-09bff - PID: 04 (idx 009, nxt: 039)
+039: 09c00-09fff - PID: 04 (idx 010, nxt: 040)
+040: 0a000-0a3ff - PID: 04 (idx 011, nxt: 041)
+041: 0a400-0a7ff - PID: 04 (idx 012, nxt: 042)
+042: 0a800-0abff - PID: 04 (idx 013, nxt: 043)
+043: 0ac00-0afff - PID: 04 (idx 014, nxt: 044)
+044: 0b000-0b3ff - PID: 04 (idx 015, nxt: 045)
+045: 0b400-0b7ff - PID: 04 (idx 016, nxt: 046)
+046: 0b800-0bbff - PID: 04 (idx 017, nxt: 047)
+047: 0bc00-0bfff - PID: 04 (idx 018, nxt: 048)
+048: 0c000-0c3ff - PID: 04 (idx 019, nxt: 049)
+049: 0c400-0c7ff - PID: 04 (idx 020, nxt: 050)
+050: 0c800-0cbff - PID: 04 (idx 021, nxt: 051)
+051: 0cc00-0cfff - PID: 04 (idx 022, nxt: 052)
+052: 0d000-0d3ff - PID: 04 (idx 023, nxt: 053)
+053: 0d400-0d7ff - PID: 04 (idx 024, nxt: 054)
+054: 0d800-0dbff - PID: 04 (idx 025, nxt: 055)
+055: 0dc00-0dfff - PID: 04 (idx 026, nxt: 056)
+056: 0e000-0e3ff - PID: 04 (idx 027, nxt: 057)
+057: 0e400-0e7ff - PID: 04 (idx 028, nxt: 058)
+058: 0e800-0ebff - PID: 04 (idx 029, nxt: 059)
+059: 0ec00-0efff - PID: 04 (idx 030, nxt: 060)
+060: 0f000-0f3ff - PID: 04 (idx 031, nxt: 061)
+061: 0f400-0f7ff - PID: 04 (idx 032, nxt: 062)
+062: 0f800-0fbff - PID: 04 (idx 033, nxt: 063)
+063: 0fc00-0ffff - PID: 04 (idx 034, nxt: 064)
+064: 10000-103ff - PID: 04 (idx 035, nxt: 065)
+065: 10400-107ff - PID: 04 (idx 036, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+Time slot  11
+--------------------------------------------
+DEALLOCATE
+--------------------------------------------
+000: 00000-003ff - PID: 02 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 02 (idx 001, nxt: 007)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 02 (idx 002, nxt: 008)
+008: 02000-023ff - PID: 02 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 02 (idx 004, nxt: -01)
+010: 02800-02bff - PID: 01 (idx 000, nxt: -01)
+	02814: 64
+011: 02c00-02fff - PID: 02 (idx 000, nxt: 012)
+012: 03000-033ff - PID: 02 (idx 001, nxt: 013)
+013: 03400-037ff - PID: 02 (idx 002, nxt: 014)
+014: 03800-03bff - PID: 02 (idx 003, nxt: -01)
+015: 03c00-03fff - PID: 03 (idx 000, nxt: 016)
+016: 04000-043ff - PID: 03 (idx 001, nxt: 017)
+017: 04400-047ff - PID: 03 (idx 002, nxt: 018)
+018: 04800-04bff - PID: 03 (idx 003, nxt: 019)
+019: 04c00-04fff - PID: 03 (idx 004, nxt: -01)
+020: 05000-053ff - PID: 04 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 04 (idx 001, nxt: 022)
+022: 05800-05bff - PID: 04 (idx 002, nxt: 023)
+023: 05c00-05fff - PID: 04 (idx 003, nxt: 024)
+024: 06000-063ff - PID: 04 (idx 004, nxt: -01)
+025: 06400-067ff - PID: 03 (idx 000, nxt: 026)
+026: 06800-06bff - PID: 03 (idx 001, nxt: 027)
+027: 06c00-06fff - PID: 03 (idx 002, nxt: 028)
+028: 07000-073ff - PID: 03 (idx 003, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	CPU 1: Put process  3 to run queue
+	CPU 1: Dispatched process  1
+Time slot  12
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 02 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 02 (idx 001, nxt: 007)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 02 (idx 002, nxt: 008)
+008: 02000-023ff - PID: 02 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 02 (idx 004, nxt: -01)
+010: 02800-02bff - PID: 01 (idx 000, nxt: -01)
+	02814: 64
+011: 02c00-02fff - PID: 02 (idx 000, nxt: 012)
+012: 03000-033ff - PID: 02 (idx 001, nxt: 013)
+013: 03400-037ff - PID: 02 (idx 002, nxt: 014)
+014: 03800-03bff - PID: 02 (idx 003, nxt: -01)
+015: 03c00-03fff - PID: 03 (idx 000, nxt: 016)
+016: 04000-043ff - PID: 03 (idx 001, nxt: 017)
+017: 04400-047ff - PID: 03 (idx 002, nxt: 018)
+018: 04800-04bff - PID: 03 (idx 003, nxt: 019)
+019: 04c00-04fff - PID: 03 (idx 004, nxt: -01)
+020: 05000-053ff - PID: 04 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 04 (idx 001, nxt: 022)
+022: 05800-05bff - PID: 04 (idx 002, nxt: 023)
+023: 05c00-05fff - PID: 04 (idx 003, nxt: 024)
+024: 06000-063ff - PID: 04 (idx 004, nxt: -01)
+025: 06400-067ff - PID: 03 (idx 000, nxt: 026)
+026: 06800-06bff - PID: 03 (idx 001, nxt: 027)
+027: 06c00-06fff - PID: 03 (idx 002, nxt: 028)
+028: 07000-073ff - PID: 03 (idx 003, nxt: -01)
+029: 07400-077ff - PID: 04 (idx 000, nxt: 030)
+030: 07800-07bff - PID: 04 (idx 001, nxt: 031)
+031: 07c00-07fff - PID: 04 (idx 002, nxt: 032)
+032: 08000-083ff - PID: 04 (idx 003, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+Time slot  13
+Time slot  14
+	CPU 0: Put process  4 to run queue
+	CPU 0: Dispatched process  2
+1024
+Time slot  15
+--------------------------------------------
+DEALLOCATE
+--------------------------------------------
+000: 00000-003ff - PID: 02 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 02 (idx 001, nxt: 007)
+007: 01c00-01fff - PID: 02 (idx 002, nxt: 008)
+	01de7: 0a
+008: 02000-023ff - PID: 02 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 02 (idx 004, nxt: -01)
+010: 02800-02bff - PID: 01 (idx 000, nxt: -01)
+	02814: 64
+011: 02c00-02fff - PID: 02 (idx 000, nxt: 012)
+012: 03000-033ff - PID: 02 (idx 001, nxt: 013)
+013: 03400-037ff - PID: 02 (idx 002, nxt: 014)
+014: 03800-03bff - PID: 02 (idx 003, nxt: -01)
+015: 03c00-03fff - PID: 03 (idx 000, nxt: 016)
+016: 04000-043ff - PID: 03 (idx 001, nxt: 017)
+017: 04400-047ff - PID: 03 (idx 002, nxt: 018)
+018: 04800-04bff - PID: 03 (idx 003, nxt: 019)
+019: 04c00-04fff - PID: 03 (idx 004, nxt: -01)
+020: 05000-053ff - PID: 04 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 04 (idx 001, nxt: 022)
+022: 05800-05bff - PID: 04 (idx 002, nxt: 023)
+023: 05c00-05fff - PID: 04 (idx 003, nxt: 024)
+024: 06000-063ff - PID: 04 (idx 004, nxt: -01)
+025: 06400-067ff - PID: 03 (idx 000, nxt: 026)
+026: 06800-06bff - PID: 03 (idx 001, nxt: 027)
+027: 06c00-06fff - PID: 03 (idx 002, nxt: 028)
+028: 07000-073ff - PID: 03 (idx 003, nxt: -01)
+029: 07400-077ff - PID: 04 (idx 000, nxt: 030)
+030: 07800-07bff - PID: 04 (idx 001, nxt: 031)
+031: 07c00-07fff - PID: 04 (idx 002, nxt: 032)
+032: 08000-083ff - PID: 04 (idx 003, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 02 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 02 (idx 001, nxt: 007)
+002: 00800-00bff - PID: 02 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 02 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 02 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 02 (idx 003, nxt: -01)
+007: 01c00-01fff - PID: 02 (idx 002, nxt: 008)
+	01de7: 0a
+008: 02000-023ff - PID: 02 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 02 (idx 004, nxt: -01)
+010: 02800-02bff - PID: 01 (idx 000, nxt: -01)
+	02814: 64
+011: 02c00-02fff - PID: 02 (idx 000, nxt: 012)
+012: 03000-033ff - PID: 02 (idx 001, nxt: 013)
+013: 03400-037ff - PID: 02 (idx 002, nxt: 014)
+014: 03800-03bff - PID: 02 (idx 003, nxt: -01)
+015: 03c00-03fff - PID: 03 (idx 000, nxt: 016)
+016: 04000-043ff - PID: 03 (idx 001, nxt: 017)
+017: 04400-047ff - PID: 03 (idx 002, nxt: 018)
+018: 04800-04bff - PID: 03 (idx 003, nxt: 019)
+019: 04c00-04fff - PID: 03 (idx 004, nxt: -01)
+020: 05000-053ff - PID: 04 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 04 (idx 001, nxt: 022)
+022: 05800-05bff - PID: 04 (idx 002, nxt: 023)
+023: 05c00-05fff - PID: 04 (idx 003, nxt: 024)
+024: 06000-063ff - PID: 04 (idx 004, nxt: -01)
+025: 06400-067ff - PID: 03 (idx 000, nxt: 026)
+026: 06800-06bff - PID: 03 (idx 001, nxt: 027)
+027: 06c00-06fff - PID: 03 (idx 002, nxt: 028)
+028: 07000-073ff - PID: 03 (idx 003, nxt: -01)
+029: 07400-077ff - PID: 04 (idx 000, nxt: 030)
+030: 07800-07bff - PID: 04 (idx 001, nxt: 031)
+031: 07c00-07fff - PID: 04 (idx 002, nxt: 032)
+032: 08000-083ff - PID: 04 (idx 003, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+Time slot  16
+--------------------------------------------
+DEALLOCATE
+--------------------------------------------
+000: 00000-003ff - PID: 02 (idx 000, nxt: 001)
+	CPU 1: Processed  1 has finished
+001: 	CPU 1: Dispatched process  3
+1024
+00400-007ff - PID: 02 (idx 001, nxt: 007)
+002: 00800-00bff - PID: 02 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 02 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 02 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 02 (idx 003, nxt: -01)
+007: 01c00-01fff - PID: 02 (idx 002, nxt: 008)
+	01de7: 0a
+008: 02000-023ff - PID: 02 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 02 (idx 004, nxt: -01)
+010: 02800-02bff - PID: 01 (idx 000, nxt: -01)
+	02814: 64
+015: 03c00-03fff - PID: 03 (idx 000, nxt: 016)
+016: 04000-043ff - PID: 03 (idx 001, nxt: 017)
+017: 04400-047ff - PID: 03 (idx 002, nxt: 018)
+	045e7: 0a
+018: 04800-04bff - PID: 03 (idx 003, nxt: 019)
+019: 04c00-04fff - PID: 03 (idx 004, nxt: -01)
+020: 05000-053ff - PID: 04 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 04 (idx 001, nxt: 022)
+022: 05800-05bff - PID: 04 (idx 002, nxt: 023)
+023: 05c00-05fff - PID: 04 (idx 003, nxt: 024)
+024: 06000-063ff - PID: 04 (idx 004, nxt: -01)
+025: 06400-067ff - PID: 03 (idx 000, nxt: 026)
+026: 06800-06bff - PID: 03 (idx 001, nxt: 027)
+027: 06c00-06fff - PID: 03 (idx 002, nxt: 028)
+028: 07000-073ff - PID: 03 (idx 003, nxt: -01)
+029: 07400-077ff - PID: 04 (idx 000, nxt: 030)
+030: 07800-07bff - PID: 04 (idx 001, nxt: 031)
+031: 07c00-07fff - PID: 04 (idx 002, nxt: 032)
+032: 08000-083ff - PID: 04 (idx 003, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+Aloccation
+--------------------------------------------
+Time slot  17
+000: 00000-003ff - PID: 02 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 02 (idx 001, nxt: 007)
+002: 00800-00bff - PID: 02 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 02 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 02 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 02 (idx 003, nxt: -01)
+006: 01800-01bff - PID: 03 (idx 000, nxt: 011)
+007: 01c00-01fff - PID: 02 (idx 002, nxt: 008)
+	01de7: 0a
+008: 02000-023ff - PID: 02 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 02 (idx 004, nxt: -01)
+010: 02800-02bff - PID: 01 (idx 000, nxt: -01)
+	02814: 64
+011: 02c00-02fff - PID: 03 (idx 001, nxt: 012)
+012: 03000-033ff - PID: 03 (idx 002, nxt: 013)
+013: 03400-037ff - PID: 03 (idx 003, nxt: -01)
+015: 03c00-03fff - PID: 03 (idx 000, nxt: 016)
+016: 04000-043ff - PID: 03 (idx 001, nxt: 017)
+017: 04400-047ff - PID: 03 (idx 002, nxt: 018)
+	045e7: 0a
+018: 04800-04bff - PID: 03 (idx 003, nxt: 019)
+019: 04c00-04fff - PID: 03 (idx 004, nxt: -01)
+020: 05000-053ff - PID: 04 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 04 (idx 001, nxt: 022)
+022: 05800-05bff - PID: 04 (idx 002, nxt: 023)
+023: 05c00-05fff - PID: 04 (idx 003, nxt: 024)
+024: 06000-063ff - PID: 04 (idx 004, nxt: -01)
+025: 06400-067ff - PID: 03 (idx 000, nxt: 026)
+026: 06800-06bff - PID: 03 (idx 001, nxt: 027)
+027: 06c00-06fff - PID: 03 (idx 002, nxt: 028)
+028: 07000-073ff - PID: 03 (idx 003, nxt: -01)
+029: 07400-077ff - PID: 04 (idx 000, nxt: 030)
+030: 07800-07bff - PID: 04 (idx 001, nxt: 031)
+031: 07c00-07fff - PID: 04 (idx 002, nxt: 032)
+032: 08000-083ff - PID: 04 (idx 003, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+DEALLOCATE
+--------------------------------------------
+Time slot  18
+000: 00000-003ff - PID: 02 (idx 000, nxt: 001)
+	CPU 0: Processed  2 has finished
+	CPU 0: Dispatched process  4
+001: 00400-007ff - PID: 02 (idx 001, nxt: 007)
+1024
+002: 00800-00bff - PID: 02 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 02 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 02 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 02 (idx 003, nxt: -01)
+006: 01800-01bff - PID: 03 (idx 000, nxt: 011)
+007: 01c00-01fff - PID: 02 (idx 002, nxt: 008)
+	01de7: 0a
+008: 02000-023ff - PID: 02 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 02 (idx 004, nxt: -01)
+010: 02800-02bff - PID: 01 (idx 000, nxt: -01)
+	02814: 64
+011: 02c00-02fff - PID: 03 (idx 001, nxt: 012)
+012: 03000-033ff - PID: 03 (idx 002, nxt: 013)
+013: 03400-037ff - PID: 03 (idx 003, nxt: -01)
+015: 03c00-03fff - PID: 03 (idx 000, nxt: 016)
+016: 04000-043ff - PID: 03 (idx 001, nxt: 017)
+017: 04400-047ff - PID: 03 (idx 002, nxt: 018)
+	045e7: 0a
+018: 04800-04bff - PID: 03 (idx 003, nxt: 019)
+019: 04c00-04fff - PID: 03 (idx 004, nxt: -01)
+020: 05000-053ff - PID: 04 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 04 (idx 001, nxt: 022)
+022: 05800-05bff - PID: 04 (idx 002, nxt: 023)
+	059e7: 0a
+023: 05c00-05fff - PID: 04 (idx 003, nxt: 024)
+024: 06000-063ff - PID: 04 (idx 004, nxt: -01)
+029: 07400-077ff - PID: 04 (idx 000, nxt: 030)
+030: 07800-07bff - PID: 04 (idx 001, nxt: 031)
+031: 07c00-07fff - PID: 04 (idx 002, nxt: 032)
+032: 08000-083ff - PID: 04 (idx 003, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+Time slot  19
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 02 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 02 (idx 001, nxt: 007)
+002: 00800-00bff - PID: 02 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 02 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 02 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 02 (idx 003, nxt: -01)
+006: 01800-01bff - PID: 03 (idx 000, nxt: 011)
+007: 01c00-01fff - PID: 02 (idx 002, nxt: 008)
+	01de7: 0a
+008: 02000-023ff - PID: 02 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 02 (idx 004, nxt: -01)
+010: 02800-02bff - PID: 01 (idx 000, nxt: -01)
+	02814: 64
+011: 02c00-02fff - PID: 03 (idx 001, nxt: 012)
+012: 03000-033ff - PID: 03 (idx 002, nxt: 013)
+013: 03400-037ff - PID: 03 (idx 003, nxt: -01)
+014: 03800-03bff - PID: 04 (idx 000, nxt: 025)
+015: 03c00-03fff - PID: 03 (idx 000, nxt: 016)
+016: 04000-043ff - PID: 03 (idx 001, nxt: 017)
+017: 04400-047ff - PID: 03 (idx 002, nxt: 018)
+	045e7: 0a
+018: 04800-04bff - PID: 03 (idx 003, nxt: 019)
+019: 04c00-04fff - PID: 03 (idx 004, nxt: -01)
+020: 05000-053ff - PID: 04 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 04 (idx 001, nxt: 022)
+022: 05800-05bff - PID: 04 (idx 002, nxt: 023)
+	059e7: 0a
+023: 05c00-05fff - PID: 04 (idx 003, nxt: 024)
+024: 06000-063ff - PID: 04 (idx 004, nxt: -01)
+025: 06400-067ff - PID: 04 (idx 001, nxt: 026)
+026: 06800-06bff - PID: 04 (idx 002, nxt: 027)
+027: 06c00-06fff - PID: 04 (idx 003, nxt: -01)
+029: 07400-077ff - PID: 04 (idx 000, nxt: 030)
+030: 07800-07bff - PID: 04 (idx 001, nxt: 031)
+031: 07c00-07fff - PID: 04 (idx 002, nxt: 032)
+032: 08000-083ff - PID: 04 (idx 003, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	CPU 1: Processed  3 has finished
+	CPU 1 stopped
+Time slot  20
+--------------------------------------------
+DEALLOCATE
+--------------------------------------------
+000: 00000-003ff - PID: 02 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 02 (idx 001, nxt: 007)
+002: 00800-00bff - PID: 02 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 02 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 02 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 02 (idx 003, nxt: -01)
+006: 01800-01bff - PID: 03 (idx 000, nxt: 011)
+007: 01c00-01fff - PID: 02 (idx 002, nxt: 008)
+	01de7: 0a
+008: 02000-023ff - PID: 02 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 02 (idx 004, nxt: -01)
+010: 02800-02bff - PID: 01 (idx 000, nxt: -01)
+	02814: 64
+011: 02c00-02fff - PID: 03 (idx 001, nxt: 012)
+012: 03000-033ff - PID: 03 (idx 002, nxt: 013)
+013: 03400-037ff - PID: 03 (idx 003, nxt: -01)
+014: 03800-03bff - PID: 04 (idx 000, nxt: 025)
+015: 03c00-03fff - PID: 03 (idx 000, nxt: 016)
+016: 04000-043ff - PID: 03 (idx 001, nxt: 017)
+017: 04400-047ff - PID: 03 (idx 002, nxt: 018)
+	045e7: 0a
+018: 04800-04bff - PID: 03 (idx 003, nxt: 019)
+019: 04c00-04fff - PID: 03 (idx 004, nxt: -01)
+020: 05000-053ff - PID: 04 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 04 (idx 001, nxt: 022)
+022: 05800-05bff - PID: 04 (idx 002, nxt: 023)
+	059e7: 0a
+023: 05c00-05fff - PID: 04 (idx 003, nxt: 024)
+024: 06000-063ff - PID: 04 (idx 004, nxt: -01)
+025: 06400-067ff - PID: 04 (idx 001, nxt: 026)
+026: 06800-06bff - PID: 04 (idx 002, nxt: 027)
+027: 06c00-06fff - PID: 04 (idx 003, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+Time slot  21
+Time slot  22
+	CPU 0: Processed  4 has finished
+	CPU 0 stopped
+
+MEMORY CONTENT: 
+000: 00000-003ff - PID: 02 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 02 (idx 001, nxt: 007)
+002: 00800-00bff - PID: 02 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 02 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 02 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 02 (idx 003, nxt: -01)
+006: 01800-01bff - PID: 03 (idx 000, nxt: 011)
+007: 01c00-01fff - PID: 02 (idx 002, nxt: 008)
+	01de7: 0a
+008: 02000-023ff - PID: 02 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 02 (idx 004, nxt: -01)
+010: 02800-02bff - PID: 01 (idx 000, nxt: -01)
+	02814: 64
+011: 02c00-02fff - PID: 03 (idx 001, nxt: 012)
+012: 03000-033ff - PID: 03 (idx 002, nxt: 013)
+013: 03400-037ff - PID: 03 (idx 003, nxt: -01)
+014: 03800-03bff - PID: 04 (idx 000, nxt: 025)
+015: 03c00-03fff - PID: 03 (idx 000, nxt: 016)
+016: 04000-043ff - PID: 03 (idx 001, nxt: 017)
+017: 04400-047ff - PID: 03 (idx 002, nxt: 018)
+	045e7: 0a
+018: 04800-04bff - PID: 03 (idx 003, nxt: 019)
+019: 04c00-04fff - PID: 03 (idx 004, nxt: -01)
+020: 05000-053ff - PID: 04 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 04 (idx 001, nxt: 022)
+022: 05800-05bff - PID: 04 (idx 002, nxt: 023)
+	059e7: 0a
+023: 05c00-05fff - PID: 04 (idx 003, nxt: 024)
+024: 06000-063ff - PID: 04 (idx 004, nxt: -01)
+025: 06400-067ff - PID: 04 (idx 001, nxt: 026)
+026: 06800-06bff - PID: 04 (idx 002, nxt: 027)
+027: 06c00-06fff - PID: 04 (idx 003, nxt: -01)
+NOTE: Read file output/os_0 to verify your result
+----- OS TEST 1 ----------------------------------------------------
+./os os_1
+Time slot   0
+	Loaded a process at input/proc/p0, PID: 1
+	CPU 3: Dispatched process  1
+Time slot   1
+Time slot   2
+	Loaded a process at input/proc/s3, PID: 2
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 01 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 01 (idx 001, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	CPU 3: Put process  1 to run queue
+	CPU 3: Dispatched process  2
+	CPU 2: Dispatched process  1
+--------------------------------------------
+Aloccation
+--------------------------------------------
+Time slot   3
+000: 00000-003ff - PID: 01 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 01 (idx 001, nxt: -01)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	Loaded a process at input/proc/m1, PID: 3
+--------------------------------------------
+DEALLOCATE
+--------------------------------------------
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+Time slot   4
+	CPU 0: Dispatched process  3
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 03 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 03 (idx 001, nxt: 007)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 03 (idx 002, nxt: 008)
+008: 02000-023ff - PID: 03 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 03 (idx 004, nxt: 010)
+010: 02800-02bff - PID: 03 (idx 005, nxt: 011)
+011: 02c00-02fff - PID: 03 (idx 006, nxt: 012)
+012: 03000-033ff - PID: 03 (idx 007, nxt: 013)
+013: 03400-037ff - PID: 03 (idx 008, nxt: 014)
+014: 03800-03bff - PID: 03 (idx 009, nxt: 015)
+015: 03c00-03fff - PID: 03 (idx 010, nxt: 016)
+016: 04000-043ff - PID: 03 (idx 011, nxt: 017)
+017: 04400-047ff - PID: 03 (idx 012, nxt: 018)
+018: 04800-04bff - PID: 03 (idx 013, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	CPU 3: Put process  2 to run queue
+	CPU 3: Dispatched process  2
+	CPU 2: Put process  1 to run queue
+	CPU 2: Dispatched process  1
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 03 (idx 000, nxt: 001)
+Time slot   5
+001: 00400-007ff - PID: 03 (idx 001, nxt: 007)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 03 (idx 002, nxt: 008)
+008: 02000-023ff - PID: 03 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 03 (idx 004, nxt: 010)
+010: 02800-02bff - PID: 03 (idx 005, nxt: 011)
+011: 02c00-02fff - PID: 03 (idx 006, nxt: 012)
+012: 03000-033ff - PID: 03 (idx 007, nxt: 013)
+013: 03400-037ff - PID: 03 (idx 008, nxt: 014)
+014: 03800-03bff - PID: 03 (idx 009, nxt: 015)
+015: 03c00-03fff - PID: 03 (idx 010, nxt: 016)
+016: 04000-043ff - PID: 03 (idx 011, nxt: 017)
+017: 04400-047ff - PID: 03 (idx 012, nxt: 018)
+018: 04800-04bff - PID: 03 (idx 013, nxt: -01)
+019: 04c00-04fff - PID: 01 (idx 000, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 03 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 03 (idx 001, nxt: 007)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 03 (idx 002, nxt: 008)
+008: 02000-023ff - PID: 03 (idx 003, nxt: 009)
+009: 02400-027ff - PID: 03 (idx 004, nxt: 010)
+010: 02800-02bff - PID: 03 (idx 005, nxt: 011)
+011: 02c00-02fff - PID: 03 (idx 006, nxt: 012)
+012: 03000-033ff - PID: 03 (idx 007, nxt: 013)
+013: 03400-037ff - PID: 03 (idx 008, nxt: 014)
+014: 03800-03bff - PID: 03 (idx 009, nxt: 015)
+015: 03c00-03fff - PID: 03 (idx 010, nxt: 016)
+016: 04000-043ff - PID: 03 (idx 011, nxt: 017)
+017: 04400-047ff - PID: 03 (idx 012, nxt: 018)
+018: 04800-04bff - PID: 03 (idx 013, nxt: -01)
+019: 04c00-04fff - PID: 01 (idx 000, nxt: -01)
+020: 05000-053ff - PID: 03 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 03 (idx 001, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	Loaded a process at input/proc/s2, PID: 4
+	CPU 1: Dispatched process  4
+Time slot   6
+	CPU 0: Put process  3 to run queue
+	CPU 0: Dispatched process  3
+--------------------------------------------
+DEALLOCATE
+--------------------------------------------
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+019: 04c00-04fff - PID: 01 (idx 000, nxt: -01)
+020: 05000-053ff - PID: 03 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 03 (idx 001, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+8192
+	CPU 3: Put process  2 to run queue
+	CPU 3: Dispatched process  2
+Time slot   7
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 03 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 03 (idx 001, nxt: -01)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+019: 04c00-04fff - PID: 01 (idx 000, nxt: -01)
+	04c14: 64
+020: 05000-053ff - PID: 03 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 03 (idx 001, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	Loaded a process at input/proc/m0, PID: 5
+	CPU 2: Put process  1 to run queue
+	CPU 2: Dispatched process  5
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 03 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 03 (idx 001, nxt: -01)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 05 (idx 000, nxt: 008)
+008: 02000-023ff - PID: 05 (idx 001, nxt: 009)
+009: 02400-027ff - PID: 05 (idx 002, nxt: 010)
+010: 02800-02bff - PID: 05 (idx 003, nxt: 011)
+011: 02c00-02fff - PID: 05 (idx 004, nxt: 012)
+012: 03000-033ff - PID: 05 (idx 005, nxt: 013)
+013: 03400-037ff - PID: 05 (idx 006, nxt: 014)
+014: 03800-03bff - PID: 05 (idx 007, nxt: 015)
+015: 03c00-03fff - PID: 05 (idx 008, nxt: 016)
+016: 04000-043ff - PID: 05 (idx 009, nxt: 017)
+017: 04400-047ff - PID: 05 (idx 010, nxt: 018)
+018: 04800-04bff - PID: 05 (idx 011, nxt: 022)
+019: 04c00-04fff - PID: 01 (idx 000, nxt: -01)
+	04c14: 64
+020: 05000-053ff - PID: 03 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 03 (idx 001, nxt: -01)
+022: 05800-05bff - PID: 05 (idx 012, nxt: 023)
+023: 05c00-05fff - PID: 05 (idx 013, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 03 (idx 000, nxt: 001)
+Time slot   8
+001: 00400-007ff - PID: 03 (idx 001, nxt: -01)
+	CPU 0: Put process  3 to run queue
+	CPU 0: Dispatched process  1
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 05 (idx 000, nxt: 008)
+008: 02000-023ff - PID: 05 (idx 001, nxt: 009)
+009: 02400-027ff - PID: 05 (idx 002, nxt: 010)
+010: 02800-02bff - PID: 05 (idx 003, nxt: 011)
+011: 02c00-02fff - PID: 05 (idx 004, nxt: 012)
+012: 03000-033ff - PID: 05 (idx 005, nxt: 013)
+013: 03400-037ff - PID: 05 (idx 006, nxt: 014)
+014: 03800-03bff - PID: 05 (idx 007, nxt: 015)
+015: 03c00-03fff - PID: 05 (idx 008, nxt: 016)
+016: 04000-043ff - PID: 05 (idx 009, nxt: 017)
+017: 04400-047ff - PID: 05 (idx 010, nxt: 018)
+018: 04800-04bff - PID: 05 (idx 011, nxt: 022)
+019: 04c00-04fff - PID: 01 (idx 000, nxt: -01)
+	04c14: 64
+020: 05000-053ff - PID: 03 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 03 (idx 001, nxt: -01)
+022: 05800-05bff - PID: 05 (idx 012, nxt: 023)
+023: 05c00-05fff - PID: 05 (idx 013, nxt: -01)
+024: 06000-063ff - PID: 05 (idx 000, nxt: 025)
+025: 06400-067ff - PID: 05 (idx 001, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	CPU 1: Put process  4 to run queue
+	CPU 1: Dispatched process  3
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 03 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 03 (idx 001, nxt: -01)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 05 (idx 000, nxt: 008)
+008: 02000-023ff - PID: 05 (idx 001, nxt: 009)
+009: 02400-027ff - PID: 05 (idx 002, nxt: 010)
+010: 02800-02bff - PID: 05 (idx 003, nxt: 011)
+011: 02c00-02fff - PID: 05 (idx 004, nxt: 012)
+012: 03000-033ff - PID: 05 (idx 005, nxt: 013)
+013: 03400-037ff - PID: 05 (idx 006, nxt: 014)
+014: 03800-03bff - PID: 05 (idx 007, nxt: 015)
+015: 03c00-03fff - PID: 05 (idx 008, nxt: 016)
+016: 04000-043ff - PID: 05 (idx 009, nxt: 017)
+017: 04400-047ff - PID: 05 (idx 010, nxt: 018)
+018: 04800-04bff - PID: 05 (idx 011, nxt: 022)
+019: 04c00-04fff - PID: 01 (idx 000, nxt: -01)
+	04c14: 64
+020: 05000-053ff - PID: 03 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 03 (idx 001, nxt: -01)
+022: 05800-05bff - PID: 05 (idx 012, nxt: 023)
+023: 05c00-05fff - PID: 05 (idx 013, nxt: -01)
+024: 06000-063ff - PID: 05 (idx 000, nxt: 025)
+025: 06400-067ff - PID: 05 (idx 001, nxt: -01)
+026: 06800-06bff - PID: 03 (idx 000, nxt: 027)
+027: 06c00-06fff - PID: 03 (idx 001, nxt: 028)
+028: 07000-073ff - PID: 03 (idx 002, nxt: 029)
+029: 07400-077ff - PID: 03 (idx 003, nxt: 030)
+030: 07800-07bff - PID: 03 (idx 004, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	Loaded a process at input/proc/p1, PID: 6
+	CPU 2: Put process  5 to run queue
+	CPU 2: Dispatched process  6
+Time slot   9
+--------------------------------------------
+DEALLOCATE
+--------------------------------------------
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 05 (idx 000, nxt: 008)
+008: 02000-023ff - PID: 05 (idx 001, nxt: 009)
+009: 02400-027ff - PID: 05 (idx 002, nxt: 010)
+010: 02800-02bff - PID: 05 (idx 003, nxt: 011)
+011: 02c00-02fff - PID: 05 (idx 004, nxt: 012)
+012: 03000-033ff - PID: 05 (idx 005, nxt: 013)
+013: 03400-037ff - PID: 05 (idx 006, nxt: 014)
+014: 03800-03bff - PID: 05 (idx 007, nxt: 015)
+015: 03c00-03fff - PID: 05 (idx 008, nxt: 016)
+016: 04000-043ff - PID: 05 (idx 009, nxt: 017)
+017: 04400-047ff - PID: 05 (idx 010, nxt: 018)
+018: 04800-04bff - PID: 05 (idx 011, nxt: 022)
+019: 04c00-04fff - PID: 01 (idx 000, nxt: -01)
+	04c14: 64
+020: 05000-053ff - PID: 03 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 03 (idx 001, nxt: -01)
+022: 05800-05bff - PID: 05 (idx 012, nxt: 023)
+023: 05c00-05fff - PID: 05 (idx 013, nxt: -01)
+024: 06000-063ff - PID: 05 (idx 000, nxt: 025)
+025: 06400-067ff - PID: 05 (idx 001, nxt: -01)
+026: 06800-06bff - PID: 03 (idx 000, nxt: 027)
+027: 06c00-06fff - PID: 03 (idx 001, nxt: 028)
+028: 07000-073ff - PID: 03 (idx 002, nxt: 029)
+029: 07400-077ff - PID: 03 (idx 003, nxt: 030)
+030: 07800-07bff - PID: 03 (idx 004, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	CPU 3: Put process  2 to run queue
+	CPU 3: Dispatched process  4
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 06 (idx 000, nxt: 001)
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  2
+	CPU 1: Put process  3 to run queue
+	CPU 1: Dispatched process  5
+Time slot  10
+001: 00400-007ff - PID: 06 (idx 001, nxt: 031)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 05 (idx 000, nxt: 008)
+008: 02000-023ff - PID: 05 (idx 001, nxt: 009)
+009: 02400-027ff - PID: 05 (idx 002, nxt: 010)
+010: 02800-02bff - PID: 05 (idx 003, nxt: 011)
+011: 02c00-02fff - PID: 05 (idx 004, nxt: 012)
+012: 03000-033ff - PID: 05 (idx 005, nxt: 013)
+013: 03400-037ff - PID: 05 (idx 006, nxt: 014)
+014: 03800-03bff - PID: 05 (idx 007, nxt: 015)
+015: 03c00-03fff - PID: 05 (idx 008, nxt: 016)
+016: 04000-043ff - PID: 05 (idx 009, nxt: 017)
+017: 04400-047ff - PID: 05 (idx 010, nxt: 018)
+018: 04800-04bff - PID: 05 (idx 011, nxt: 022)
+019: 04c00-04fff - PID: 01 (idx 000, nxt: -01)
+	04c14: 64
+020: 05000-053ff - PID: 03 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 03 (idx 001, nxt: -01)
+022: 05800-05bff - PID: 05 (idx 012, nxt: 023)
+023: 05c00-05fff - PID: 05 (idx 013, nxt: -01)
+024: 06000-063ff - PID: 05 (idx 000, nxt: 025)
+025: 06400-067ff - PID: 05 (idx 001, nxt: -01)
+026: 06800-06bff - PID: 03 (idx 000, nxt: 027)
+027: 06c00-06fff - PID: 03 (idx 001, nxt: 028)
+028: 07000-073ff - PID: 03 (idx 002, nxt: 029)
+029: 07400-077ff - PID: 03 (idx 003, nxt: 030)
+030: 07800-07bff - PID: 03 (idx 004, nxt: -01)
+031: 07c00-07fff - PID: 06 (idx 002, nxt: 032)
+032: 08000-083ff - PID: 06 (idx 003, nxt: 033)
+033: 08400-087ff - PID: 06 (idx 004, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+DEALLOCATE
+--------------------------------------------
+000: 00000-003ff - PID: 06 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 06 (idx 001, nxt: 031)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+019: 04c00-04fff - PID: 01 (idx 000, nxt: -01)
+	04c14: 64
+020: 05000-053ff - PID: 03 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 03 (idx 001, nxt: -01)
+024: 06000-063ff - PID: 05 (idx 000, nxt: 025)
+025: 06400-067ff - PID: 05 (idx 001, nxt: -01)
+026: 06800-06bff - PID: 03 (idx 000, nxt: 027)
+027: 06c00-06fff - PID: 03 (idx 001, nxt: 028)
+028: 07000-073ff - PID: 03 (idx 002, nxt: 029)
+029: 07400-077ff - PID: 03 (idx 003, nxt: 030)
+030: 07800-07bff - PID: 03 (idx 004, nxt: -01)
+031: 07c00-07fff - PID: 06 (idx 002, nxt: 032)
+032: 08000-083ff - PID: 06 (idx 003, nxt: 033)
+033: 08400-087ff - PID: 06 (idx 004, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	Loaded a process at input/proc/s0, PID: 7
+	CPU 2: Put process  6 to run queue
+Time slot  11
+	CPU 2: Dispatched process  7
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 06 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 06 (idx 001, nxt: 031)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 05 (idx 000, nxt: 008)
+008: 02000-023ff - PID: 05 (idx 001, nxt: -01)
+019: 04c00-04fff - PID: 01 (idx 000, nxt: -01)
+	04c14: 64
+020: 05000-053ff - PID: 03 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 03 (idx 001, nxt: -01)
+024: 06000-063ff - PID: 05 (idx 000, nxt: 025)
+025: 06400-067ff - PID: 05 (idx 001, nxt: -01)
+026: 06800-06bff - PID: 03 (idx 000, nxt: 027)
+027: 06c00-06fff - PID: 03 (idx 001, nxt: 028)
+028: 07000-073ff - PID: 03 (idx 002, nxt: 029)
+029: 07400-077ff - PID: 03 (idx 003, nxt: 030)
+030: 07800-07bff - PID: 03 (idx 004, nxt: -01)
+031: 07c00-07fff - PID: 06 (idx 002, nxt: 032)
+032: 08000-083ff - PID: 06 (idx 003, nxt: 033)
+033: 08400-087ff - PID: 06 (idx 004, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	CPU 3: Put process  4 to run queue
+	CPU 3: Dispatched process  4
+	CPU 1: Put process  5 to run queue
+	CPU 1: Dispatched process  3
+Time slot  12
+--------------------------------------------
+DEALLOCATE
+--------------------------------------------
+000: 00000-003ff - PID: 06 (idx 000, nxt: 001)
+	CPU 0: Put process  2 to run queue
+	CPU 0: Dispatched process  6
+001: 00400-007ff - PID: 06 (idx 001, nxt: 031)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 05 (idx 000, nxt: 008)
+008: 02000-023ff - PID: 05 (idx 001, nxt: -01)
+019: 04c00-04fff - PID: 01 (idx 000, nxt: -01)
+	04c14: 64
+020: 05000-053ff - PID: 03 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 03 (idx 001, nxt: -01)
+024: 06000-063ff - PID: 05 (idx 000, nxt: 025)
+025: 06400-067ff - PID: 05 (idx 001, nxt: -01)
+031: 07c00-07fff - PID: 06 (idx 002, nxt: 032)
+032: 08000-083ff - PID: 06 (idx 003, nxt: 033)
+033: 08400-087ff - PID: 06 (idx 004, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 06 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 06 (idx 001, nxt: 031)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 05 (idx 000, nxt: 008)
+008: 02000-023ff - PID: 05 (idx 001, nxt: -01)
+009: 02400-027ff - PID: 06 (idx 000, nxt: 010)
+010: 02800-02bff - PID: 06 (idx 001, nxt: 011)
+011: 02c00-02fff - PID: 06 (idx 002, nxt: 012)
+012: 03000-033ff - PID: 06 (idx 003, nxt: 013)
+013: 03400-037ff - PID: 06 (idx 004, nxt: 014)
+014: 03800-03bff - PID: 06 (idx 005, nxt: 015)
+015: 03c00-03fff - PID: 06 (idx 006, nxt: 016)
+016: 04000-043ff - PID: 06 (idx 007, nxt: 017)
+017: 04400-047ff - PID: 06 (idx 008, nxt: 018)
+018: 04800-04bff - PID: 06 (idx 009, nxt: 022)
+019: 04c00-04fff - PID: 01 (idx 000, nxt: -01)
+	04c14: 64
+020: 05000-053ff - PID: 03 (idx 000, nxt: 021)
+021: 05400-057ff - PID: 03 (idx 001, nxt: -01)
+022: 05800-05bff - PID: 06 (idx 010, nxt: 023)
+023: 05c00-05fff - PID: 06 (idx 011, nxt: 026)
+024: 06000-063ff - PID: 05 (idx 000, nxt: 025)
+025: 06400-067ff - PID: 05 (idx 001, nxt: -01)
+026: 06800-06bff - PID: 06 (idx 012, nxt: 027)
+027: 06c00-06fff - PID: 06 (idx 013, nxt: 028)
+028: 07000-073ff - PID: 06 (idx 014, nxt: 029)
+029: 07400-077ff - PID: 06 (idx 015, nxt: 030)
+030: 07800-07bff - PID: 06 (idx 016, nxt: 034)
+031: 07c00-07fff - PID: 06 (idx 002, nxt: 032)
+032: 08000-083ff - PID: 06 (idx 003, nxt: 033)
+033: 08400-087ff - PID: 06 (idx 004, nxt: -01)
+034: 08800-08bff - PID: 06 (idx 017, nxt: 035)
+035: 08c00-08fff - PID: 06 (idx 018, nxt: 036)
+036: 09000-093ff - PID: 06 (idx 019, nxt: 037)
+037: 09400-097ff - PID: 06 (idx 020, nxt: 038)
+038: 09800-09bff - PID: 06 (idx 021, nxt: 039)
+039: 09c00-09fff - PID: 06 (idx 022, nxt: 040)
+040: 0a000-0a3ff - PID: 06 (idx 023, nxt: 041)
+041: 0a400-0a7ff - PID: 06 (idx 024, nxt: 042)
+042: 0a800-0abff - PID: 06 (idx 025, nxt: 043)
+043: 0ac00-0afff - PID: 06 (idx 026, nxt: 044)
+044: 0b000-0b3ff - PID: 06 (idx 027, nxt: 045)
+045: 0b400-0b7ff - PID: 06 (idx 028, nxt: 046)
+046: 0b800-0bbff - PID: 06 (idx 029, nxt: 047)
+047: 0bc00-0bfff - PID: 06 (idx 030, nxt: 048)
+048: 0c000-0c3ff - PID: 06 (idx 031, nxt: 049)
+049: 0c400-0c7ff - PID: 06 (idx 032, nxt: 050)
+050: 0c800-0cbff - PID: 06 (idx 033, nxt: 051)
+051: 0cc00-0cfff - PID: 06 (idx 034, nxt: 052)
+052: 0d000-0d3ff - PID: 06 (idx 035, nxt: 053)
+053: 0d400-0d7ff - PID: 06 (idx 036, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	CPU 2: Put process  7 to run queue
+	CPU 2: Dispatched process  1
+	CPU 3: Put process  4 to run queue
+Time slot  13
+--------------------------------------------
+DEALLOCATE
+--------------------------------------------
+000: 00000-003ff - PID: 06 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 06 (idx 001, nxt: 031)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 05 (idx 000, nxt: 008)
+008: 02000-023ff - PID: 05 (idx 001, nxt: -01)
+009: 02400-027ff - PID: 06 (idx 000, nxt: 010)
+010: 02800-02bff - PID: 06 (idx 001, nxt: 011)
+011: 02c00-02fff - PID: 06 (idx 002, nxt: 012)
+012: 03000-033ff - PID: 06 (idx 003, nxt: 013)
+013: 03400-037ff - PID: 06 (idx 004, nxt: 014)
+014: 03800-03bff - PID: 06 (idx 005, nxt: 015)
+015: 03c00-03fff - PID: 06 (idx 006, nxt: 016)
+016: 04000-043ff - PID: 06 (idx 007, nxt: 017)
+017: 04400-047ff - PID: 06 (idx 008, nxt: 018)
+018: 04800-04bff - PID: 06 (idx 009, nxt: 022)
+019: 04c00-04fff - PID: 01 (idx 000, nxt: -01)
+	04c14: 64
+022: 05800-05bff - PID: 06 (idx 010, nxt: 023)
+023: 05c00-05fff - PID: 06 (idx 011, nxt: 026)
+024: 06000-063ff - PID: 05 (idx 000, nxt: 025)
+025: 06400-067ff - PID: 05 (idx 001, nxt: -01)
+026: 06800-06bff - PID: 06 (idx 012, nxt: 027)
+027: 06c00-06fff - PID: 06 (idx 013, nxt: 028)
+028: 07000-073ff - PID: 06 (idx 014, nxt: 029)
+029: 07400-077ff - PID: 06 (idx 015, nxt: 030)
+030: 07800-07bff - PID: 06 (idx 016, nxt: 034)
+031: 07c00-07fff - PID: 06 (idx 002, nxt: 032)
+032: 08000-083ff - PID: 06 (idx 003, nxt: 033)
+033: 08400-087ff - PID: 06 (idx 004, nxt: -01)
+034: 08800-08bff - PID: 06 (idx 017, nxt: 035)
+035: 08c00-08fff - PID: 06 (idx 018, nxt: 036)
+036: 09000-093ff - PID: 06 (idx 019, nxt: 037)
+037: 09400-097ff - PID: 06 (idx 020, nxt: 038)
+038: 09800-09bff - PID: 06 (idx 021, nxt: 039)
+039: 09c00-09fff - PID: 06 (idx 022, nxt: 040)
+040: 0a000-0a3ff - PID: 06 (idx 023, nxt: 041)
+041: 0a400-0a7ff - PID: 06 (idx 024, nxt: 042)
+042: 0a800-0abff - PID: 06 (idx 025, nxt: 043)
+043: 0ac00-0afff - PID: 06 (idx 026, nxt: 044)
+044: 0b000-0b3ff - PID: 06 (idx 027, nxt: 045)
+045: 0b400-0b7ff - PID: 06 (idx 028, nxt: 046)
+046: 0b800-0bbff - PID: 06 (idx 029, nxt: 047)
+047: 0bc00-0bfff - PID: 06 (idx 030, nxt: 048)
+048: 0c000-0c3ff - PID: 06 (idx 031, nxt: 049)
+049: 0c400-0c7ff - PID: 06 (idx 032, nxt: 050)
+050: 0c800-0cbff - PID: 06 (idx 033, nxt: 051)
+051: 0cc00-0cfff - PID: 06 (idx 034, nxt: 052)
+052: 0d000-0d3ff - PID: 06 (idx 035, nxt: 053)
+053: 0d400-0d7ff - PID: 06 (idx 036, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	CPU 3: Dispatched process  4
+--------------------------------------------
+DEALLOCATE
+--------------------------------------------
+000: 00000-003ff - PID: 06 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 06 (idx 001, nxt: 031)
+002: 00800-00bff - PID: 01 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 01 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 01 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 01 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 01 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 05 (idx 000, nxt: 008)
+008: 02000-023ff - PID: 05 (idx 001, nxt: -01)
+019: 04c00-04fff - PID: 01 (idx 000, nxt: -01)
+	04c14: 64
+024: 06000-063ff - PID: 05 (idx 000, nxt: 025)
+025: 06400-067ff - PID: 05 (idx 001, nxt: -01)
+031: 07c00-07fff - PID: 06 (idx 002, nxt: 032)
+032: 08000-083ff - PID: 06 (idx 003, nxt: 033)
+033: 08400-087ff - PID: 06 (idx 004, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+--------------------------------------------
+DEALLOCATE
+--------------------------------------------
+000: 00000-003ff - PID: 06 (idx 000, nxt: 001)
+	CPU 1: Processed  3 has finished
+	CPU 1: Dispatched process  7
+Time slot  14
+	CPU 0: Put process  6 to run queue
+	CPU 0: Dispatched process  2
+001: 00400-007ff - PID: 06 (idx 001, nxt: 031)
+007: 01c00-01fff - PID: 05 (idx 000, nxt: 008)
+008: 02000-023ff - PID: 05 (idx 001, nxt: -01)
+019: 04c00-04fff - PID: 01 (idx 000, nxt: -01)
+	04c14: 64
+024: 06000-063ff - PID: 05 (idx 000, nxt: 025)
+025: 06400-067ff - PID: 05 (idx 001, nxt: -01)
+031: 07c00-07fff - PID: 06 (idx 002, nxt: 032)
+032: 08000-083ff - PID: 06 (idx 003, nxt: 033)
+033: 08400-087ff - PID: 06 (idx 004, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	CPU 3: Put process  4 to run queue
+	CPU 3: Dispatched process  5
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 06 (idx 000, nxt: 001)
+	CPU 2: Processed  1 has finished
+	CPU 2: Dispatched process  4
+Time slot  15
+001: 00400-007ff - PID: 06 (idx 001, nxt: 031)
+002: 00800-00bff - PID: 05 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 05 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 05 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 05 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 05 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 05 (idx 000, nxt: 008)
+008: 02000-023ff - PID: 05 (idx 001, nxt: -01)
+019: 04c00-04fff - PID: 01 (idx 000, nxt: -01)
+	04c14: 64
+024: 06000-063ff - PID: 05 (idx 000, nxt: 025)
+025: 06400-067ff - PID: 05 (idx 001, nxt: -01)
+031: 07c00-07fff - PID: 06 (idx 002, nxt: 032)
+032: 08000-083ff - PID: 06 (idx 003, nxt: 033)
+033: 08400-087ff - PID: 06 (idx 004, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	Loaded a process at input/proc/s1, PID: 8
+15360
+	CPU 1: Put process  7 to run queue
+	CPU 1: Dispatched process  8
+Time slot  16
+	CPU 0: Put process  2 to run queue
+	CPU 0: Dispatched process  6
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 06 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 06 (idx 001, nxt: 031)
+002: 00800-00bff - PID: 05 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 05 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 05 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 05 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 05 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 05 (idx 000, nxt: 008)
+008: 02000-023ff - PID: 05 (idx 001, nxt: -01)
+009: 02400-027ff - PID: 06 (idx 000, nxt: 010)
+010: 02800-02bff - PID: 06 (idx 001, nxt: 011)
+011: 02c00-02fff - PID: 06 (idx 002, nxt: 012)
+012: 03000-033ff - PID: 06 (idx 003, nxt: -01)
+019: 04c00-04fff - PID: 01 (idx 000, nxt: -01)
+	04c14: 64
+024: 06000-063ff - PID: 05 (idx 000, nxt: 025)
+	06014: 66
+025: 06400-067ff - PID: 05 (idx 001, nxt: -01)
+031: 07c00-07fff - PID: 06 (idx 002, nxt: 032)
+032: 08000-083ff - PID: 06 (idx 003, nxt: 033)
+033: 08400-087ff - PID: 06 (idx 004, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	CPU 3: Put process  5 to run queue
+	CPU 3: Dispatched process  7
+Time slot  17
+	CPU 2: Put process  4 to run queue
+	CPU 2: Dispatched process  2
+	CPU 2: Processed  2 has finished
+	CPU 2: Dispatched process  5
+17408
+Time slot  18
+	CPU 0: Put process  6 to run queue
+	CPU 0: Dispatched process  4
+	CPU 1: Put process  8 to run queue
+	CPU 1: Dispatched process  6
+1024
+	CPU 3: Put process  7 to run queue
+	CPU 3: Dispatched process  8
+	CPU 2: Processed  5 has finished
+Time slot  19
+	CPU 2: Dispatched process  7
+--------------------------------------------
+Aloccation
+--------------------------------------------
+000: 00000-003ff - PID: 06 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 06 (idx 001, nxt: 031)
+002: 00800-00bff - PID: 05 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 05 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 05 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 05 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 05 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 05 (idx 000, nxt: 008)
+	01fe8: 15
+008: 02000-023ff - PID: 05 (idx 001, nxt: -01)
+009: 02400-027ff - PID: 06 (idx 000, nxt: 010)
+010: 02800-02bff - PID: 06 (idx 001, nxt: 011)
+011: 02c00-02fff - PID: 06 (idx 002, nxt: 012)
+012: 03000-033ff - PID: 06 (idx 003, nxt: -01)
+013: 03400-037ff - PID: 06 (idx 000, nxt: 014)
+014: 03800-03bff - PID: 06 (idx 001, nxt: 015)
+015: 03c00-03fff - PID: 06 (idx 002, nxt: 016)
+016: 04000-043ff - PID: 06 (idx 003, nxt: -01)
+019: 04c00-04fff - PID: 01 (idx 000, nxt: -01)
+	04c14: 64
+024: 06000-063ff - PID: 05 (idx 000, nxt: 025)
+	06014: 66
+025: 06400-067ff - PID: 05 (idx 001, nxt: -01)
+031: 07c00-07fff - PID: 06 (idx 002, nxt: 032)
+	07de7: 0a
+032: 08000-083ff - PID: 06 (idx 003, nxt: 033)
+033: 08400-087ff - PID: 06 (idx 004, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	CPU 1: Put process  6 to run queue
+	CPU 1: Dispatched process  6
+Time slot  20
+--------------------------------------------
+DEALLOCATE
+--------------------------------------------
+	CPU 0: Processed  4 has finished
+	CPU 0 stopped
+000: 00000-003ff - PID: 06 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 06 (idx 001, nxt: 031)
+002: 00800-00bff - PID: 05 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 05 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 05 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 05 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 05 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 05 (idx 000, nxt: 008)
+	01fe8: 15
+008: 02000-023ff - PID: 05 (idx 001, nxt: -01)
+013: 03400-037ff - PID: 06 (idx 000, nxt: 014)
+014: 03800-03bff - PID: 06 (idx 001, nxt: 015)
+015: 03c00-03fff - PID: 06 (idx 002, nxt: 016)
+016: 04000-043ff - PID: 06 (idx 003, nxt: -01)
+019: 04c00-04fff - PID: 01 (idx 000, nxt: -01)
+	04c14: 64
+024: 06000-063ff - PID: 05 (idx 000, nxt: 025)
+	06014: 66
+025: 06400-067ff - PID: 05 (idx 001, nxt: -01)
+031: 07c00-07fff - PID: 06 (idx 002, nxt: 032)
+	07de7: 0a
+032: 08000-083ff - PID: 06 (idx 003, nxt: 033)
+033: 08400-087ff - PID: 06 (idx 004, nxt: -01)
+vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	CPU 3: Put process  8 to run queue
+	CPU 3: Dispatched process  8
+	CPU 2: Put process  7 to run queue
+	CPU 2: Dispatched process  7
+Time slot  21
+Time slot  22
+	CPU 1: Processed  6 has finished
+	CPU 1 stopped
+	CPU 3: Put process  8 to run queue
+	CPU 3: Dispatched process  8
+Time slot  23
+	CPU 2: Put process  7 to run queue
+	CPU 2: Dispatched process  7
+	CPU 3: Processed  8 has finished
+	CPU 3 stopped
+Time slot  24
+Time slot  25
+	CPU 2: Put process  7 to run queue
+	CPU 2: Dispatched process  7
+Time slot  26
+Time slot  27
+	CPU 2: Put process  7 to run queue
+	CPU 2: Dispatched process  7
+Time slot  28
+	CPU 2: Processed  7 has finished
+	CPU 2 stopped
+
+MEMORY CONTENT: 
+000: 00000-003ff - PID: 06 (idx 000, nxt: 001)
+001: 00400-007ff - PID: 06 (idx 001, nxt: 031)
+002: 00800-00bff - PID: 05 (idx 000, nxt: 003)
+003: 00c00-00fff - PID: 05 (idx 001, nxt: 004)
+004: 01000-013ff - PID: 05 (idx 002, nxt: 005)
+005: 01400-017ff - PID: 05 (idx 003, nxt: 006)
+006: 01800-01bff - PID: 05 (idx 004, nxt: -01)
+007: 01c00-01fff - PID: 05 (idx 000, nxt: 008)
+	01fe8: 15
+008: 02000-023ff - PID: 05 (idx 001, nxt: -01)
+013: 03400-037ff - PID: 06 (idx 000, nxt: 014)
+014: 03800-03bff - PID: 06 (idx 001, nxt: 015)
+015: 03c00-03fff - PID: 06 (idx 002, nxt: 016)
+016: 04000-043ff - PID: 06 (idx 003, nxt: -01)
+019: 04c00-04fff - PID: 01 (idx 000, nxt: -01)
+	04c14: 64
+024: 06000-063ff - PID: 05 (idx 000, nxt: 025)
+	06014: 66
+025: 06400-067ff - PID: 05 (idx 001, nxt: -01)
+031: 07c00-07fff - PID: 06 (idx 002, nxt: 032)
+	07de7: 0a
+032: 08000-083ff - PID: 06 (idx 003, nxt: 033)
+033: 08400-087ff - PID: 06 (idx 004, nxt: -01)
+NOTE: Read file output/os_1 to verify your result
